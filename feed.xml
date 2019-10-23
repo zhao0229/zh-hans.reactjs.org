@@ -1,4 +1,71 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React]]></title><description><![CDATA[A JavaScript library for building user interfaces]]></description><link>https://zh-hans.reactjs.org</link><generator>RSS for Node</generator><lastBuildDate>Tue, 15 Oct 2019 11:18:50 GMT</lastBuildDate><item><title><![CDATA[全新的 React DevTools 简介]]></title><description><![CDATA[<p>我们激动地宣布 React 开发者工具发布了新版本，目前可以在 Chrome，Firefox 以及 （Chromium）Edge 中使用！</p>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[React]]></title><description><![CDATA[A JavaScript library for building user interfaces]]></description><link>https://zh-hans.reactjs.org</link><generator>RSS for Node</generator><lastBuildDate>Wed, 23 Oct 2019 02:02:44 GMT</lastBuildDate><item><title><![CDATA[Preparing for the Future with React Prereleases]]></title><description><![CDATA[<p>To share upcoming changes with our partners in the React ecosystem, we’re establishing official prerelease channels. We hope this process will help us make changes to React with confidence, and give developers the opportunity to try out experimental features.</p>
+<blockquote>
+<p>This post will be most relevant to developers who work on frameworks, libraries, or developer tooling. Developers who use React primarily to build user-facing applications should not need to worry about our prerelease channels.</p>
+</blockquote>
+<p>React relies on a thriving open source community to file bug reports, open pull requests, and <a href="https://github.com/reactjs/rfcs" target="_blank" rel="nofollow noopener noreferrer">submit RFCs</a>. To encourage feedback, we sometimes share special builds of React that include unreleased features.</p>
+<p>Because the source of truth for React is our <a href="https://github.com/facebook/react" target="_blank" rel="nofollow noopener noreferrer">public GitHub repository</a>, it’s always been possible to build a copy of React that includes the latest changes. However it’s much easier for developers to install React from npm, so we occasionally publish prerelease builds to the npm registry. A recent example is the 16.7 alpha, which included an early version of the Hooks API.</p>
+<p>We would like to make it even easier for developers to test prerelease builds of React, so we’re formalizing our process with three separate release channels.</p>
+<h2 id="release-channels"><a href="#release-channels" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Release Channels</h2>
+<blockquote>
+<p>The information in this post is also available on our <a href="/docs/release-channels.html">Release Channels</a> page. We will update that document whenever there are changes to our release process.</p>
+</blockquote>
+<p>Each of React’s release channels is designed for a distinct use case:</p>
+<ul>
+<li><a href="#latest-channel"><strong>Latest</strong></a> is for stable, semver React releases. It’s what you get when you install React from npm. This is the channel you’re already using today. <strong>Use this for all user-facing React applications.</strong></li>
+<li><a href="#next-channel"><strong>Next</strong></a> tracks the master branch of the React source code repository. Think of these as release candidates for the next minor semver release. Use this for integration testing between React and third party projects.</li>
+<li><a href="#experimental-channel"><strong>Experimental</strong></a> includes experimental APIs and features that aren’t available in the stable releases. These also track the master branch, but with additional feature flags turned on. Use this to try out upcoming features before they are released.</li>
+</ul>
+<p>All releases are published to npm, but only Latest uses <a href="/docs/faq-versioning.html">semantic versioning</a>. Prereleases (those in the Next and Experimental channels) have versions generated from a hash of their contents, e.g. <code class="gatsby-code-text">0.0.0-1022ee0ec</code> for Next and <code class="gatsby-code-text">0.0.0-experimental-1022ee0ec</code> for Experimental.</p>
+<p><strong>The only officially supported release channel for user-facing applications is Latest</strong>. Next and Experimental releases are provided for testing purposes only, and we provide no guarantees that behavior won’t change between releases. They do not follow the semver protocol that we use for releases from Latest.</p>
+<p>By publishing prereleases to the same registry that we use for stable releases, we are able to take advantage of the many tools that support the npm workflow, like <a href="https://unpkg.com" target="_blank" rel="nofollow noopener noreferrer">unpkg</a> and <a href="https://codesandbox.io" target="_blank" rel="nofollow noopener noreferrer">CodeSandbox</a>.</p>
+<h3 id="latest-channel"><a href="#latest-channel" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Latest Channel</h3>
+<p>Latest is the channel used for stable React releases. It corresponds to the <code class="gatsby-code-text">latest</code> tag on npm. It is the recommended channel for all React apps that are shipped to real users.</p>
+<p><strong>If you’re not sure which channel you should use, it’s Latest.</strong> If you’re a React developer, this is what you’re already using.</p>
+<p>You can expect updates to Latest to be extremely stable. Versions follow the semantic versioning scheme. Learn more about our commitment to stability and incremental migration in our <a href="/docs/faq-versioning.html">versioning policy</a>.</p>
+<h3 id="next-channel"><a href="#next-channel" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Next Channel</h3>
+<p>The Next channel is a prerelease channel that tracks the master branch of the React repository. We use prereleases in the Next channel as release candidates for the Latest channel. You can think of Next as a superset of Latest that is updated more frequently.</p>
+<p>The degree of change between the most recent Next release and the most recent Latest release is approximately the same as you would find between two minor semver releases. However, <strong>the Next channel does not conform to semantic versioning.</strong> You should expect occasional breaking changes between successive releases in the Next channel.</p>
+<p><strong>Do not use prereleases in user-facing applications.</strong></p>
+<p>Releases in Next are published with the <code class="gatsby-code-text">next</code> tag on npm. Versions are generated from a hash of the build’s contents, e.g. <code class="gatsby-code-text">0.0.0-1022ee0ec</code>.</p>
+<h4 id="using-the-next-channel-for-integration-testing"><a href="#using-the-next-channel-for-integration-testing" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Using the Next Channel for Integration Testing</h4>
+<p>The Next channel is designed to support integration testing between React and other projects.</p>
+<p>All changes to React go through extensive internal testing before they are released to the public. However, there are a myriad of environments and configurations used throughout the React ecosystem, and it’s not possible for us to test against every single one.</p>
+<p>If you’re the author of a third party React framework, library, developer tool, or similar infrastructure-type project, you can help us keep React stable for your users and the entire React community by periodically running your test suite against the most recent changes. If you’re interested, follow these steps:</p>
+<ul>
+<li>
+<p>Set up a cron job using your preferred continuous integration platform. Cron jobs are supported by both <a href="https://circleci.com/docs/2.0/triggers/#scheduled-builds" target="_blank" rel="nofollow noopener noreferrer">CircleCI</a> and <a href="https://docs.travis-ci.com/user/cron-jobs/" target="_blank" rel="nofollow noopener noreferrer">Travis CI</a>.</p>
+</li>
+<li>
+<p>In the cron job, update your React packages to the most recent React release in the Next channel, using <code class="gatsby-code-text">next</code> tag on npm. Using the npm cli:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="gatsby-code-text"><code class="gatsby-code-text">npm update react@next react-dom@next</code></pre></div>
+<p>Or yarn:</p>
+<div class="gatsby-highlight" data-language="text"><pre class="gatsby-code-text"><code class="gatsby-code-text">yarn upgrade react@next react-dom@next</code></pre></div>
+</li>
+<li>
+<p>Run your test suite against the updated packages.</p>
+</li>
+<li>
+<p>If everything passes, great! You can expect that your project will work with the next minor React release.</p>
+</li>
+<li>
+<p>If something breaks unexpectedly, please let us know by <a href="https://github.com/facebook/react/issues" target="_blank" rel="nofollow noopener noreferrer">filing an issue</a>.</p>
+</li>
+</ul>
+<p>A project that uses this workflow is Next.js. (No pun intended! Seriously!) You can refer to their <a href="https://github.com/zeit/next.js/blob/c0a1c0f93966fe33edd93fb53e5fafb0dcd80a9e/.circleci/config.yml" target="_blank" rel="nofollow noopener noreferrer">CircleCI configuration</a> as an example.</p>
+<h3 id="experimental-channel"><a href="#experimental-channel" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Experimental Channel</h3>
+<p>Like Next, the Experimental channel is a prerelease channel that tracks the master branch of the React repository. Unlike Next, Experimental releases include additional features and APIs that are not ready for wider release.</p>
+<p>Usually, an update to Next is accompanied by a corresponding update to Experimental. They are based on the same source revision, but are built using a different set of feature flags.</p>
+<p>Experimental releases may be significantly different than releases to Next and Latest. <strong>Do not use Experimental releases in user-facing applications.</strong> You should expect frequent breaking changes between releases in the Experimental channel.</p>
+<p>Releases in Experimental are published with the <code class="gatsby-code-text">experimental</code> tag on npm. Versions are generated from a hash of the build’s contents, e.g. <code class="gatsby-code-text">0.0.0-experimental-1022ee0ec</code>.</p>
+<h4 id="what-goes-into-an-experimental-release"><a href="#what-goes-into-an-experimental-release" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What Goes Into an Experimental Release?</h4>
+<p>Experimental features are ones that are not ready to be released to the wider public, and may change drastically before they are finalized. Some experiments may never be finalized — the reason we have experiments is to test the viability of proposed changes.</p>
+<p>For example, if the Experimental channel had existed when we announced Hooks, we would have released Hooks to the Experimental channel weeks before they were available in Latest.</p>
+<p>You may find it valuable to run integration tests against Experimental. This is up to you. However, be advised that Experimental is even less stable than Next. <strong>We do not guarantee any stability between Experimental releases.</strong></p>
+<h4 id="how-can-i-learn-more-about-experimental-features"><a href="#how-can-i-learn-more-about-experimental-features" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How Can I Learn More About Experimental Features?</h4>
+<p>Experimental features may or may not be documented. Usually, experiments aren’t documented until they are close to shipping in Next or Stable.</p>
+<p>If a feature is not documented, they may be accompanied by an <a href="https://github.com/reactjs/rfcs" target="_blank" rel="nofollow noopener noreferrer">RFC</a>.</p>
+<p>We will post to the React blog when we’re ready to announce new experiments, but that doesn’t mean we will publicize every experiment.</p>
+<p>You can always refer to our public GitHub repository’s <a href="https://github.com/facebook/react/commits/master" target="_blank" rel="nofollow noopener noreferrer">history</a> for a comprehensive list of changes.</p>]]></description><link>https://zh-hans.reactjs.org/blog/2019/10/22/react-release-channels.html</link><guid isPermaLink="false">https://zh-hans.reactjs.org/blog/2019/10/22/react-release-channels.html</guid><pubDate>Tue, 22 Oct 2019 00:00:00 GMT</pubDate></item><item><title><![CDATA[全新的 React DevTools 简介]]></title><description><![CDATA[<p>我们激动地宣布 React 开发者工具发布了新版本，目前可以在 Chrome，Firefox 以及 （Chromium）Edge 中使用！</p>
 <h2 id="有哪些变化？"><a href="#%E6%9C%89%E5%93%AA%E4%BA%9B%E5%8F%98%E5%8C%96%EF%BC%9F" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>有哪些变化？</h2>
 <p>React DevTools v4 中发生了很多变化！
 站在高角度来看，此版本应该可以提供显著的性能提升以及得以改进的导航体验。
@@ -812,553 +879,4 @@ ReactDOM<span class="token punctuation">.</span><span class="token function">uns
 <p>If you’ve been using 2.x alpha versions, we provide <a href="https://gist.github.com/gaearon/8650d1c70e436e5eff01f396dffc4114" target="_blank" rel="nofollow noopener noreferrer">separate migration instructions</a> for them.</p>
 </blockquote>
 <h2 id="thanks"><a href="#thanks" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Thanks </h2>
-<p>This release wouldn’t be possible without our wonderful community of contributors. We’d like to thank <a href="https://github.com/andriijas" target="_blank" rel="nofollow noopener noreferrer">Andreas Cederström</a>, <a href="https://github.com/clemmy" target="_blank" rel="nofollow noopener noreferrer">Clement Hoang</a>, <a href="https://github.com/existentialism" target="_blank" rel="nofollow noopener noreferrer">Brian Ng</a>, <a href="https://github.com/kentcdodds" target="_blank" rel="nofollow noopener noreferrer">Kent C. Dodds</a>, <a href="https://github.com/viankakrisna" target="_blank" rel="nofollow noopener noreferrer">Ade Viankakrisna Fadlil</a>, <a href="https://github.com/ai" target="_blank" rel="nofollow noopener noreferrer">Andrey Sitnik</a>, <a href="https://github.com/ro-savage" target="_blank" rel="nofollow noopener noreferrer">Ro Savage</a>, <a href="https://github.com/Fabianopb" target="_blank" rel="nofollow noopener noreferrer">Fabiano Brito</a>, <a href="https://github.com/iansu" target="_blank" rel="nofollow noopener noreferrer">Ian Sutherland</a>, <a href="https://github.com/petetnt" target="_blank" rel="nofollow noopener noreferrer">Pete Nykänen</a>, <a href="https://github.com/jeffposnick" target="_blank" rel="nofollow noopener noreferrer">Jeffrey Posnick</a>, <a href="https://github.com/bugzpodder" target="_blank" rel="nofollow noopener noreferrer">Jack Zhao</a>, <a href="https://github.com/sokra" target="_blank" rel="nofollow noopener noreferrer">Tobias Koppers</a>, <a href="https://github.com/hzoo" target="_blank" rel="nofollow noopener noreferrer">Henry Zhu</a>, <a href="https://github.com/arcanis" target="_blank" rel="nofollow noopener noreferrer">Maël Nison</a>, <a href="https://github.com/lixiaoyan" target="_blank" rel="nofollow noopener noreferrer">XiaoYan Li</a>, <a href="https://github.com/themre" target="_blank" rel="nofollow noopener noreferrer">Marko Trebizan</a>, <a href="https://github.com/mareksuscak" target="_blank" rel="nofollow noopener noreferrer">Marek Suscak</a>, <a href="https://github.com/miraage" target="_blank" rel="nofollow noopener noreferrer">Mikhail Osher</a>, and many others who provided feedback and testing for this release.</p>]]></description><link>https://zh-hans.reactjs.org/blog/2018/10/01/create-react-app-v2.html</link><guid isPermaLink="false">https://zh-hans.reactjs.org/blog/2018/10/01/create-react-app-v2.html</guid><pubDate>Mon, 01 Oct 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Introducing the React Profiler]]></title><description><![CDATA[<p>React 16.5 adds support for a new DevTools profiler plugin.
-This plugin uses React’s <a href="https://github.com/reactjs/rfcs/pull/51" target="_blank" rel="nofollow noopener noreferrer">experimental Profiler API</a> to collect timing information about each component that’s rendered in order to identify performance bottlenecks in React applications.
-It will be fully compatible with our upcoming <a href="/blog/2018/03/01/sneak-peek-beyond-react-16.html">time slicing and suspense</a> features.</p>
-<p>This blog post covers the following topics:</p>
-<ul>
-<li><a href="#profiling-an-application">Profiling an application</a></li>
-<li>
-<p><a href="#reading-performance-data">Reading performance data</a></p>
-<ul>
-<li><a href="#browsing-commits">Browsing commits</a></li>
-<li><a href="#filtering-commits">Filtering commits</a></li>
-<li><a href="#flame-chart">Flame chart</a></li>
-<li><a href="#ranked-chart">Ranked chart</a></li>
-<li><a href="#component-chart">Component chart</a></li>
-<li><a href="#interactions">Interactions</a></li>
-</ul>
-</li>
-<li>
-<p><a href="#troubleshooting">Troubleshooting</a></p>
-<ul>
-<li><a href="#no-profiling-data-has-been-recorded-for-the-selected-root">No profiling data has been recorded for the selected root</a></li>
-<li><a href="#no-timing-data-to-display-for-the-selected-commit">No timing data to display for the selected commit</a></li>
-</ul>
-</li>
-<li><a href="#deep-dive-video">Deep dive video</a></li>
-</ul>
-<h2 id="profiling-an-application"><a href="#profiling-an-application" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Profiling an application </h2>
-<p>DevTools will show a “Profiler” tab for applications that support the new profiling API:</p>
-<p>
-  <a
-    class="gatsby-resp-image-link"
-    href="/static/devtools-profiler-tab-4da6b55fc3c98de04c261cd902c14dc3-53c76.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-  
-  <span
-    class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block;  max-width: 840px; margin-left: auto; margin-right: auto;"
-  >
-    <span
-      class="gatsby-resp-image-background-image"
-      style="padding-bottom: 47.82608695652174%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAAB60lEQVQoz62RzW7TQBSFI8Srsekz1BJs2LDkLVjUKGSRxJay6AsgRJtCwwKJqiGNY4fSFhAqUdImkf/GcezxZHw9l5lpQXSBxIIjfTrjY+mTf2qDPXvr7XH34bA/2nbcsTEcjY0TxzMc95Px4ahvvN5/Y3QPDo2Xr/aMo+OB3r2xxPM0rutuSx45jvOgpvLty/l3uiaYXX7FTZYgcIqiLDSVPJcsQ9hkuquSyi1Hmq+RMaYpigJV5vO5q4W94dX5e2+F3YFfHowi6I1jeHeawKFHNL1xcof9YQRnPwgwmgOlFKSLK2GSJB+l7n5ttogvAp/hbBbA9TIRkzkT0yUVYVqKKKtEtIY7hJKsAIHid5QUCSEDLczW6YUa4utFFUwnOJkQvJqGSIIM+YYj54AbXsm+oSxBdonSqF/1D+GJFsZkpYWrZVKlYSyCgIo4osL3C7GKE5FEiTwzEYaFhIo0zgVnXIi/PWGepWdqSBeEp0EEflBAFDIIJSuyBimFwKdACINYkqUMoAQl+QW/Ffa18PNlOFFDSSvcyG+c5yj/ooQiMtmixH9KFEWnWrj12Hz67HnrhW1bO82WZbbbbbPVusFqt0zLkm3ZZlteq3uKZrNp1ut1s9FoKHZs2250Op0nWnibe/+B2u7ubu0n/Rxb5mrVIIgAAAAASUVORK5CYII='); background-size: cover; display: block;"
-    >
-      <img
-        class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
-        alt="New DevTools "profiler" tab"
-        title=""
-        src="/static/devtools-profiler-tab-4da6b55fc3c98de04c261cd902c14dc3-acf85.png"
-        srcset="/static/devtools-profiler-tab-4da6b55fc3c98de04c261cd902c14dc3-c1418.png 210w,
-/static/devtools-profiler-tab-4da6b55fc3c98de04c261cd902c14dc3-5d5d8.png 420w,
-/static/devtools-profiler-tab-4da6b55fc3c98de04c261cd902c14dc3-acf85.png 840w,
-/static/devtools-profiler-tab-4da6b55fc3c98de04c261cd902c14dc3-53c76.png 1012w"
-        sizes="(max-width: 840px) 100vw, 840px"
-      />
-    </span>
-  </span>
-  
-  </a>
-    </p>
-<blockquote>
-<p>Note:</p>
-<p><code class="gatsby-code-text">react-dom</code> 16.5+ supports profiling in DEV mode.
-A production profiling bundle is also available as <code class="gatsby-code-text">react-dom/profiling</code>.
-Read more about how to use this bundle at <a href="https://fb.me/react-profiling" target="_blank" rel="nofollow noopener noreferrer">fb.me/react-profiling</a> </p>
-</blockquote>
-<p>The “Profiler” panel will be empty initially. Click the record button to start profiling:</p>
-<p>
-  <a
-    class="gatsby-resp-image-link"
-    href="/static/start-profiling-bae8d10e17f06eeb8c512c91c0153cff-53c76.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-  
-  <span
-    class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block;  max-width: 840px; margin-left: auto; margin-right: auto;"
-  >
-    <span
-      class="gatsby-resp-image-background-image"
-      style="padding-bottom: 47.82608695652174%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABdUlEQVQoz62QvU7DMBCAI8SrsfAMjQQzI+9RBthpq0ody9ABMTC0C0lKwo8KDEjt0GZomthJmx8S1+bukkbAiHrSp7OTu89na4+318f347sTe2w3DNPQDaPENE19OBzq/f6NPhgMIPf10WhE3+k/YBkPumPbDcdxTi3LOtIwPiYvnyxkaj53VRAEv/B9Xy2XS7VarZTnIR59Z4xBZsr1AsXDSGFMp1OHhLOn57cszZTP10Ucx+IvSZIQaZqK9XotNpuNkFKK7XYrCkSIHIVwuAG6Q40HwTsdoSQWSlwQ1fpngISoa0oEdnPOTRJGUURCrMdcFAUBI5RZCFX9rzMCYpWXtVQAz2CRMAzDWgjNEvaSeZ5ki4WEUyVcs55qNyWu8zyXcH2Jz1EJzZ1wUgnzLMtEAm+VcC5i1xVfsI+hAZqxqX47zNVVkbwSPpAQJpipPQQM9krCdrt93u12LzudThO4+AdN6L9qtVpnJKziYA9ovV5P+wavR2c66XZI3gAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
-    >
-      <img
-        class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
-        alt="Click "record" to start profiling"
-        title=""
-        src="/static/start-profiling-bae8d10e17f06eeb8c512c91c0153cff-acf85.png"
-        srcset="/static/start-profiling-bae8d10e17f06eeb8c512c91c0153cff-c1418.png 210w,
-/static/start-profiling-bae8d10e17f06eeb8c512c91c0153cff-5d5d8.png 420w,
-/static/start-profiling-bae8d10e17f06eeb8c512c91c0153cff-acf85.png 840w,
-/static/start-profiling-bae8d10e17f06eeb8c512c91c0153cff-53c76.png 1012w"
-        sizes="(max-width: 840px) 100vw, 840px"
-      />
-    </span>
-  </span>
-  
-  </a>
-    </p>
-<p>Once you’ve started recording, DevTools will automatically collect performance information each time your application renders.
-Use your app as you normally would.
-When you are finished profiling, click the “Stop” button.</p>
-<p>
-  <a
-    class="gatsby-resp-image-link"
-    href="/static/stop-profiling-45619de03bed468869f7a0878f220586-53c76.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-  
-  <span
-    class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block;  max-width: 840px; margin-left: auto; margin-right: auto;"
-  >
-    <span
-      class="gatsby-resp-image-background-image"
-      style="padding-bottom: 47.82608695652174%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABcklEQVQoz62QS2vCQBCAQ+lf66W/wUB77rH/Qw/tuSQieLSHQMFDD3oxiSQHUfsCC1UP5rGJeTRuNrvd2SRiH/TkwMdkM7PfDiNZD3fnj+P+hTW2Grqhy7peYhiGPBgM5F7vXtY0jeeePBwOxX9R55j6SLYtq2Hb9qVpmmcSxNN08oZCxJbLNfN9/xue57HNZsNc12WOAzjiP0KIZ8TWjs+CcMsgFouFLYQfL6+zLNsxD0V5kiQkTRMCuSZN0z1wzrKM0KIgBScHCMEg5I/rXHcqhQjNxROMEnoQRUH/DC6i0HwAgdtBEBilcLsVQuitMiuo6GF8DPYzoC56eA3nOcvzXDTzNZilMAz3QpgAPlcrl2r9Z/qZJLQs/Z4QY0zjOKawikpo1MJpJcQcKJI03pHZ3CF8DELLVeyB3dV9FbgSjoQwiqJ3doTgg02EUFXV606nc9Nut5ucVo2iqK3D8z80+f1bRVGuhLCKkyMgdbtd6Qtm52eikNUIKgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
-    >
-      <img
-        class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
-        alt="Click "stop" when you are finished profiling"
-        title=""
-        src="/static/stop-profiling-45619de03bed468869f7a0878f220586-acf85.png"
-        srcset="/static/stop-profiling-45619de03bed468869f7a0878f220586-c1418.png 210w,
-/static/stop-profiling-45619de03bed468869f7a0878f220586-5d5d8.png 420w,
-/static/stop-profiling-45619de03bed468869f7a0878f220586-acf85.png 840w,
-/static/stop-profiling-45619de03bed468869f7a0878f220586-53c76.png 1012w"
-        sizes="(max-width: 840px) 100vw, 840px"
-      />
-    </span>
-  </span>
-  
-  </a>
-    </p>
-<p>Assuming your application rendered at least once while profiling, DevTools will show several ways to view the performance data.
-We’ll <a href="#reading-performance-data">take a look at each of these below</a>.</p>
-<h2 id="reading-performance-data"><a href="#reading-performance-data" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reading performance data </h2>
-<h3 id="browsing-commits"><a href="#browsing-commits" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Browsing commits </h3>
-<p>Conceptually, React does work in two phases:</p>
-<ul>
-<li>The <strong>render</strong> phase determines what changes need to be made to e.g. the DOM. During this phase, React calls <code class="gatsby-code-text">render</code> and then compares the result to the previous render.</li>
-<li>The <strong>commit</strong> phase is when React applies any changes. (In the case of React DOM, this is when React inserts, updates, and removes DOM nodes.) React also calls lifecycles like <code class="gatsby-code-text">componentDidMount</code> and <code class="gatsby-code-text">componentDidUpdate</code> during this phase.</li>
-</ul>
-<p>The DevTools profiler groups performance info by commit.
-Commits are displayed in a bar chart near the top of the profiler:</p>
-<p>
-  <a
-    class="gatsby-resp-image-link"
-    href="/static/commit-selector-bd72dec045515d59be51c944e902d263-8ef72.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-  
-  <span
-    class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block;  max-width: 601px; margin-left: auto; margin-right: auto;"
-  >
-    <span
-      class="gatsby-resp-image-background-image"
-      style="padding-bottom: 9.983361064891847%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAIAAADXZGvcAAAACXBIWXMAAAsSAAALEgHS3X78AAAAaklEQVQI103Kuw5AQBBAUf//LxqlQhQSjWqFQoIN2RkzY58iUVI63U1uBgDLqpFknLRBSSmFEOLPl4HZI95yRsSL6LHuZop0ZAfCuPnNsLWe5XTOfnP6MftOSnHfyzLXRT60pZ41qMp3zQsu+2w/rwWfxgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
-    >
-      <img
-        class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
-        alt="Bar chart of profiled commits"
-        title=""
-        src="/static/commit-selector-bd72dec045515d59be51c944e902d263-8ef72.png"
-        srcset="/static/commit-selector-bd72dec045515d59be51c944e902d263-69e48.png 210w,
-/static/commit-selector-bd72dec045515d59be51c944e902d263-3b0aa.png 420w,
-/static/commit-selector-bd72dec045515d59be51c944e902d263-8ef72.png 601w"
-        sizes="(max-width: 601px) 100vw, 601px"
-      />
-    </span>
-  </span>
-  
-  </a>
-    </p>
-<p>Each bar in the chart represents a single commit with the currently selected commit colored black.
-You can click on a bar (or the left/right arrow buttons) to select a different commit.</p>
-<p>The color and height of each bar corresponds to how long that commit took to render.
-(Taller, yellow bars took longer than shorter, blue bars.)</p>
-<h3 id="filtering-commits"><a href="#filtering-commits" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Filtering commits </h3>
-<p>The longer you profile, the more times your application will render.
-In some cases you may end up with <em>too many commits</em> to easily process.
-The profiler offers a filtering mechanism to help with this.
-Use it to specify a threshold and the profiler will hide all commits that were <em>faster</em> than that value.</p>
-<p><img src="/filtering-commits-683b9d860ef722e1505e5e629df7ef7e.gif" alt="Filtering commits by time"></p>
-<h3 id="flame-chart"><a href="#flame-chart" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Flame chart </h3>
-<p>The flame chart view represents the state of your application for a particular commit.
-Each bar in the chart represents a React component (e.g. <code class="gatsby-code-text">App</code>, <code class="gatsby-code-text">Nav</code>).
-The size and color of the bar represents how long it took to render the component and its children.
-(The width of a bar represents how much time was spent <em>when the component last rendered</em> and the color represents how much time was spent <em>as part of the current commit</em>.)</p>
-<p>
-  <a
-    class="gatsby-resp-image-link"
-    href="/static/flame-chart-3046f500b9bfc052bde8b7b3b3cfc243-53c76.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-  
-  <span
-    class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block;  max-width: 840px; margin-left: auto; margin-right: auto;"
-  >
-    <span
-      class="gatsby-resp-image-background-image"
-      style="padding-bottom: 47.82608695652174%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAAB30lEQVQoz62Rz08TURDHG+O/xsW/gZeIN6M3L548kTSQiFHUgx5oS9PIqQkhgaIpEovYbep2d1vaQgndSpV2f++2XWRnZ3y7LejZ8E2+eW/mzXzevN1EZevdvaKwfV/6Xpuv1UQWWRRFJksSE4Qy2y0U2F6xyHZ3CqwiVJmi1Jksy6yuKHGNJEnzPF7gPXOJSMftZsccTejXQCdvNCLf92NPJhNyXIdc1yXDMkk3dZ5zyfMcnvfIdhzyxmMeexRJVVUxBrbaJ0dD3SVdMwJDN8EyLG4TTO7hQAOeB7V3Bu2zDvwY9MHqdeGnUIGLahV8bQgBwFUE1DStzHF3E5/yyaaw+ZSOS0k4+rKIjVISGwfPsbG3iKeHy9j6uoQdeR3HZh/9y4CvJqp1Bd3zcwwsCzkLIqBt20IMXN1aaz7cWKZn2+/DtdIH2hA/0mE1T0tvH9Cb9ceU//yKbN+ha0EY0u8guIkRMQZallWJgQenJ82dwQWVhkbYG1+iz2vkfhdf7m/ifquMmqNHU2CIfzXl3OgaOJ1w5HqN2WX8W/BDXgBIANOnwHSoEKLGyP/uZ76aAb/FQP6XunQLchxHiYHpdPpJNptdzWQyK9wv/sMrvP91KpV6FANnunMLTuRyucQfU2RSA7PakTgAAAAASUVORK5CYII='); background-size: cover; display: block;"
-    >
-      <img
-        class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
-        alt="Example flame chart"
-        title=""
-        src="/static/flame-chart-3046f500b9bfc052bde8b7b3b3cfc243-acf85.png"
-        srcset="/static/flame-chart-3046f500b9bfc052bde8b7b3b3cfc243-c1418.png 210w,
-/static/flame-chart-3046f500b9bfc052bde8b7b3b3cfc243-5d5d8.png 420w,
-/static/flame-chart-3046f500b9bfc052bde8b7b3b3cfc243-acf85.png 840w,
-/static/flame-chart-3046f500b9bfc052bde8b7b3b3cfc243-53c76.png 1012w"
-        sizes="(max-width: 840px) 100vw, 840px"
-      />
-    </span>
-  </span>
-  
-  </a>
-    </p>
-<blockquote>
-<p>Note:</p>
-<p>The width of a bar indicates how long it took to render the component (and its children) when they last rendered.
-If the component did not re-render as part of this commit, the time represents a previous render.
-The wider a component is, the longer it took to render.</p>
-<p>The color of a bar indicates how long the component (and its children) took to render in the selected commit.
-Yellow components took more time, blue components took less time, and gray components did not render at all during this commit.</p>
-</blockquote>
-<p>For example, the commit shown above took a total of 18.4ms to render.
-The <code class="gatsby-code-text">Router</code> component was the “most expensive” to render (taking 18.4ms).
-Most of this time was due to two of its children, <code class="gatsby-code-text">Nav</code> (8.4ms) and <code class="gatsby-code-text">Route</code> (7.9ms).
-The rest of the time was divided between its remaining children or spent in the component’s own render method.</p>
-<p>You can zoom in or out on a flame chart by clicking on components:
-<img src="/zoom-in-and-out-39ba82394205242af7c37ccb3a631f4d.gif" alt="Click on a component to zoom in or out"></p>
-<p>Clicking on a component will also select it and show information in the right side panel which includes its <code class="gatsby-code-text">props</code> and <code class="gatsby-code-text">state</code> at the time of this commit.
-You can drill into these to learn more about what the component actually rendered during the commit:</p>
-<p><img src="/props-and-state-1f4d023f1a0f281386625f28df87c78f.gif" alt="Viewing a component&#x27;s props and state for a commit"></p>
-<p>In some cases, selecting a component and stepping between commits may also provide a hint as to <em>why</em> the component rendered:</p>
-<p><img src="/see-which-props-changed-cc2a8b37bbce52c49a11c2f8e55dccbc.gif" alt="Seeing which values changed between commits"></p>
-<p>The above image shows that <code class="gatsby-code-text">state.scrollOffset</code> changed between commits.
-This is likely what caused the <code class="gatsby-code-text">List</code> component to re-render.</p>
-<h3 id="ranked-chart"><a href="#ranked-chart" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ranked chart </h3>
-<p>The ranked chart view represents a single commit.
-Each bar in the chart represents a React component (e.g. <code class="gatsby-code-text">App</code>, <code class="gatsby-code-text">Nav</code>).
-The chart is ordered so that the components which took the longest to render are at the top.</p>
-<p>
-  <a
-    class="gatsby-resp-image-link"
-    href="/static/ranked-chart-0c81347535e28c9cdef0e94fab887b89-53c76.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-  
-  <span
-    class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block;  max-width: 840px; margin-left: auto; margin-right: auto;"
-  >
-    <span
-      class="gatsby-resp-image-background-image"
-      style="padding-bottom: 47.82608695652174%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABlUlEQVQoz62OT2/TMBiHI7SvxoXPMEtwhhvckPYBECqHIY6s6r/BdpjaXmARNzSta6WQpGuF1o5kW7e1YYmj1HHiuH6xvYpNOwBC+0mPbL2v9fxsdFrvHpn7zceHVnfV/tZFtnWNa/dQr/MVmbufkWl+QeanNuod7CHXsZHjuqjf7yPHcZBt26vyfGJZ1kND5Xg0HpEcwLskkKQcSAa/wXMOEY4hTa4giCgkdAFzQiGOMUQRhiRJNCq+71taOOhtD04HHwCPWwU7aXF22ubFEuo1eXb8kQuvxmf9TU7HW3wefOeTixmfTac8yzJeFAVTwiAIOlK3Yrwovx4+a7yClJxzYKEQWSAg/3kDuxIiDwUUob6nSSg8zxdRFAkpE9LFlRBjfKCFL3fqw72Jr2YLtf0TKly+IoQApRQYYyCE0EJZ0NXCtWZ9eEawFsqIf8ntnlvC6x/aP44Oc7FQM6aWf0OW3p2xpXBfC/OUenAPiePY1cL3GxvPq9XqeqVSKUne/AelWq32tlwuP9XCZR7cA0aj0TB+AdiMX66/MIlxAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
-    >
-      <img
-        class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
-        alt="Example ranked chart"
-        title=""
-        src="/static/ranked-chart-0c81347535e28c9cdef0e94fab887b89-acf85.png"
-        srcset="/static/ranked-chart-0c81347535e28c9cdef0e94fab887b89-c1418.png 210w,
-/static/ranked-chart-0c81347535e28c9cdef0e94fab887b89-5d5d8.png 420w,
-/static/ranked-chart-0c81347535e28c9cdef0e94fab887b89-acf85.png 840w,
-/static/ranked-chart-0c81347535e28c9cdef0e94fab887b89-53c76.png 1012w"
-        sizes="(max-width: 840px) 100vw, 840px"
-      />
-    </span>
-  </span>
-  
-  </a>
-    </p>
-<blockquote>
-<p>Note:</p>
-<p>A component’s render time includes the time spent rendering its children,
-so the components which took the longest to render are generally near the top of the tree.</p>
-</blockquote>
-<p>As with the flame chart, you can zoom in or out on a ranked chart by clicking on components.</p>
-<h3 id="component-chart"><a href="#component-chart" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Component chart </h3>
-<p>Sometimes it’s useful to see how many times a particular component rendered while you were profiling.
-The component chart provides this information in the form of a bar chart.
-Each bar in the chart represents a time when the component rendered.
-The color and height of each bar corresponds to how long the component took to render <em>relative to other components</em> in a particular commit.</p>
-<p>
-  <a
-    class="gatsby-resp-image-link"
-    href="/static/component-chart-d71275b42c6109e222fbb0932a0c8c09-53c76.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-  
-  <span
-    class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block;  max-width: 840px; margin-left: auto; margin-right: auto;"
-  >
-    <span
-      class="gatsby-resp-image-background-image"
-      style="padding-bottom: 47.82608695652174%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAACSElEQVQoz62P20tUURTGh+gf6a33CHwTukCIQQ9JNw8kEZHRU2+9BzaCJ1LLB43xOPiaMjIgBl1Gzcuc0RnL0RQdTUWdOefsc3Wcs85ardlq9Af0wcf69tqL3147tjCeaPqiTzzM5xZbs9mscuJ5RWdPTU4qqVRKSafTyujIqJLJZBRd15WzuRzP5PP51kKh0JbL5a7H6lpZXloXrk27e/tkWhaZpkkWV0vYMpfLZVkNwyTTsEgIIV2f3auYZDsO1bW5WVqQwFJpa9lzHTosV0LX88D3ffC52lYFhLCAYbC/UwTXWOW8DfwY9wV4POP6Ac97NeGF9KO4Psu48zHnmIq00Ue1lV5AIqw7NJcwmH4sM0CEYRgihEfsABmEDMVqlc9RiCyob1gxjDkJrGwXipR/QrTWHdGZTJ0w00xQtfmAFNW8v1cRvxIeHpBrGVS2KuR6rgTaQsxLoFgdKdJCG1Vnn0bHYh0lwVlBmGjAo68tyE0Mph5hsPweg60xDJ0SVrd30d7ZQd8PMAKQQN76ZEN7bewnLbYTpC/Wqp+uwdGvBMBBBnDiMkSfGiCYeQ74uRFg/BKEqQsAvz9CzToGr7wPYSRhtVPgjAS6G+Ml2npJ9P0q0XwT0TTXmZtE2WaiuRucr5z09VucG4mcb0Q+f4S//K9s216SwMG+jhfJN+3dgx0tXVq8VR3qfKAOxe+o2ut77Luq1qmoWpxz/L6qddxWtb5Xav/bd2p/b4/6YWBAHdS0rmQy2ZNIJJ5J4KnO/QfHhoeHY38AsLpA6BTZFEwAAAAASUVORK5CYII='); background-size: cover; display: block;"
-    >
-      <img
-        class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
-        alt="Example component chart"
-        title=""
-        src="/static/component-chart-d71275b42c6109e222fbb0932a0c8c09-acf85.png"
-        srcset="/static/component-chart-d71275b42c6109e222fbb0932a0c8c09-c1418.png 210w,
-/static/component-chart-d71275b42c6109e222fbb0932a0c8c09-5d5d8.png 420w,
-/static/component-chart-d71275b42c6109e222fbb0932a0c8c09-acf85.png 840w,
-/static/component-chart-d71275b42c6109e222fbb0932a0c8c09-53c76.png 1012w"
-        sizes="(max-width: 840px) 100vw, 840px"
-      />
-    </span>
-  </span>
-  
-  </a>
-    </p>
-<p>The chart above shows that the <code class="gatsby-code-text">List</code> component rendered 11 times.
-It also shows that each time it rendered, it was the most “expensive” component in the commit (meaning that it took the longest).</p>
-<p>To view this chart, either double-click on a component <em>or</em> select a component and click on the blue bar chart icon in the right detail pane.
-You can return to the previous chart by clicking the “x” button in the right detail pane.
-You can also double click on a particular bar to view more information about that commit.</p>
-<p><img src="/see-all-commits-for-a-fiber-99cb4321ded8eb0c21ae5fc673878563.gif" alt="How to view all renders for a specific component"></p>
-<p>If the selected component did not render at all during the profiling session, the following message will be shown:</p>
-<p>
-  <a
-    class="gatsby-resp-image-link"
-    href="/static/no-render-times-for-selected-component-8eb0c37a13353ef5d9e61ae8fc040705-53c76.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-  
-  <span
-    class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block;  max-width: 840px; margin-left: auto; margin-right: auto;"
-  >
-    <span
-      class="gatsby-resp-image-background-image"
-      style="padding-bottom: 47.82608695652174%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABZ0lEQVQoz62PzU7CQBDHG+OrefEZaKJnj74HHvQBCiHckQMx8eABE5VSUlDwQEI9oId+7PaD2rTLjrND26BHwz/5dbc7M/+Z0SZ3xumDdX9mT+yGaZp6xXg81ofDod7v9/XBYKD3erf4/0jvVY5ljnTbthvT6fTcsqwTTel9PlvyiMN6/QUBYxAEDBjbEQQBuK4Lvu+D53kE55xQuZ8egzCKQGm1ciZk6Dgf8zT9BtcPizhOxGazqUFTEUWRyPO8Bs2IJElETHlJzpMCXhfLZ7Q71jC4oBYghfrsU6m6qxMbSZxYZllWRreqTm3xQoZhGJLhFlUUBSiEEDXV286P8gAnpRjsOtEFBxv9MsSkLa4hFbiqZJxJjMk4jultX382IEOsqSd8KzvleAicQKRpSuBaKplQhQoVr+4leWn4RIY4gQMHEA42I8NWq3XZ6XSu2+12E7n6B02svzEM44IMSx0dAK3b7Wo/FtRnZY5UiRMAAAAASUVORK5CYII='); background-size: cover; display: block;"
-    >
-      <img
-        class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
-        alt="No render times for the selected component"
-        title=""
-        src="/static/no-render-times-for-selected-component-8eb0c37a13353ef5d9e61ae8fc040705-acf85.png"
-        srcset="/static/no-render-times-for-selected-component-8eb0c37a13353ef5d9e61ae8fc040705-c1418.png 210w,
-/static/no-render-times-for-selected-component-8eb0c37a13353ef5d9e61ae8fc040705-5d5d8.png 420w,
-/static/no-render-times-for-selected-component-8eb0c37a13353ef5d9e61ae8fc040705-acf85.png 840w,
-/static/no-render-times-for-selected-component-8eb0c37a13353ef5d9e61ae8fc040705-53c76.png 1012w"
-        sizes="(max-width: 840px) 100vw, 840px"
-      />
-    </span>
-  </span>
-  
-  </a>
-    </p>
-<h3 id="interactions"><a href="#interactions" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Interactions </h3>
-<p>React recently added another <a href="https://fb.me/react-interaction-tracing" target="_blank" rel="nofollow noopener noreferrer">experimental API</a> for tracing the <em>cause</em> of an update.
-“Interactions” traced with this API will also be shown in the profiler:</p>
-<p>
-  <a
-    class="gatsby-resp-image-link"
-    href="/static/interactions-a91a39ac076b71aa7a202aaf46f8bd5a-53c76.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-  
-  <span
-    class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block;  max-width: 840px; margin-left: auto; margin-right: auto;"
-  >
-    <span
-      class="gatsby-resp-image-background-image"
-      style="padding-bottom: 47.82608695652174%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABl0lEQVQoz62RzW7aQBDHraqvlkufIZaSc499j/TQPgAgxD1wQJFy6IFKSQyOgBAUKVFJJKAW9trOrm28O97J7ILpoT1VGemn9Xz9Z0Z2bi8an36MLk/G/vh4OBy6NaPRyB0MBm6v13P7/b7bPe+S/9PGPc+zNf7Qcyfj8fFkMjn1ff/IMfYwv3tMeIrL1RrjOEZG1C9jDDebDYZheCBJEkzT1ObXYYzJ6ysaWywWt1bw19PTPY8TXP2OVMA45FkGWY0QIASHoiggJwT5JAo0BMIogpAxE5Naa1wul9ck99F5mU7nIgiwoMIKkXKVNkZDNchSy0zossh1JaWNZ9tCr4JAx4zpPM9MCMyGdNWNFXyezeZpFCEPgkpVgGVZopTygFIKt0LYb07nizRGUW6RtseSYmS1oGcF4/V6jqaxKCoFoEEpDeYljK+sX+182pLut9vX/LVhyvkMd1m5n/Zvdo1AdSSvQf9B7gWvrCDnfIHvYPTnp1aw2Wx+abfb31qt1hnx9T84o/7vjUbjsxXc24d3wOl0Os4blShlbz/d1/8AAAAASUVORK5CYII='); background-size: cover; display: block;"
-    >
-      <img
-        class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
-        alt="The interactions panel"
-        title=""
-        src="/static/interactions-a91a39ac076b71aa7a202aaf46f8bd5a-acf85.png"
-        srcset="/static/interactions-a91a39ac076b71aa7a202aaf46f8bd5a-c1418.png 210w,
-/static/interactions-a91a39ac076b71aa7a202aaf46f8bd5a-5d5d8.png 420w,
-/static/interactions-a91a39ac076b71aa7a202aaf46f8bd5a-acf85.png 840w,
-/static/interactions-a91a39ac076b71aa7a202aaf46f8bd5a-53c76.png 1012w"
-        sizes="(max-width: 840px) 100vw, 840px"
-      />
-    </span>
-  </span>
-  
-  </a>
-    </p>
-<p>The image above shows a profiling session that traced four interactions.
-Each row represents an interaction that was traced.
-The colored dots along the row represent commits that were related to that interaction.</p>
-<p>You can also see which interactions were traced for a particular commit from the flame chart and ranked chart views as well:</p>
-<p>
-  <a
-    class="gatsby-resp-image-link"
-    href="/static/interactions-for-commit-9847e78f930cb7cf2b0f9682853a5dbc-53c76.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-  
-  <span
-    class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block;  max-width: 840px; margin-left: auto; margin-right: auto;"
-  >
-    <span
-      class="gatsby-resp-image-background-image"
-      style="padding-bottom: 47.82608695652174%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABuUlEQVQoz62Ry27aQBSGraqv1k2fISO16y77Humi3XUDCPECva3SICULLkkxYGKCsAmCFMYm2OBbYo7P6ZmBpllX+aVftmfO+fzPGaP97fPr0/aPN91f5pFpmkK50+mIbrcrms2GODn5Kc7PzsTXL99Fq9UW/X5f27Is0ev1VN0RP99yzytDaTS0x3dRSkt5R3GcUJZlj47jmDzPo9lsxt8xpWmq1zabDQVBQFEUaStNp9OOBlr29dV8uSYp5U56Hvi+r71arYBhwIUwHF6DlDNe8yAIQ/i9WIDHNdnDA+x2u1wBuafJuJdGvV637asBua4L4/EYlR3HRWswRNdx0HUnOJ/Pcb0OEAAwiSO8GY1wLSXmSYLMAgUMw7ClgXx2m+dBk8mk4DS8saEsjeiycUoXF5fkOA7luQ6hVdzfU3J7S9liQbnvExaFBvII2hrI87GTJFGzKbIs5X1CKlJMfROXS4k8N5UCH8Xv9MSsv8B9wu12Ozj8XMUAVcBdgPujwL+1vQtOhE+NmB+ADQ3kW7qhZxDffF8Dy+Xy+2q1+rFSqRyzP/yHj7n/U6lUeqeBB714Bhu1Ws34A880Xu+Ar3OjAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
-    >
-      <img
-        class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
-        alt="List of interactions for a commit"
-        title=""
-        src="/static/interactions-for-commit-9847e78f930cb7cf2b0f9682853a5dbc-acf85.png"
-        srcset="/static/interactions-for-commit-9847e78f930cb7cf2b0f9682853a5dbc-c1418.png 210w,
-/static/interactions-for-commit-9847e78f930cb7cf2b0f9682853a5dbc-5d5d8.png 420w,
-/static/interactions-for-commit-9847e78f930cb7cf2b0f9682853a5dbc-acf85.png 840w,
-/static/interactions-for-commit-9847e78f930cb7cf2b0f9682853a5dbc-53c76.png 1012w"
-        sizes="(max-width: 840px) 100vw, 840px"
-      />
-    </span>
-  </span>
-  
-  </a>
-    </p>
-<p>You can navigate between interactions and commits by clicking on them:</p>
-<p><img src="/navigate-between-interactions-and-commits-7c66e7686b5242473c87b3d0b4576cf3.gif" alt="Navigate between interactions and commits"></p>
-<p>The tracing API is still new and we will cover it in more detail in a future blog post.</p>
-<h2 id="troubleshooting"><a href="#troubleshooting" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Troubleshooting </h2>
-<h3 id="no-profiling-data-has-been-recorded-for-the-selected-root"><a href="#no-profiling-data-has-been-recorded-for-the-selected-root" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>No profiling data has been recorded for the selected root </h3>
-<p>If your application has multiple “roots”, you may see the following message after profiling:
-
-  <a
-    class="gatsby-resp-image-link"
-    href="/static/no-profiler-data-multi-root-0755492a211f5bbb775285c0ff2fdfda-53c76.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-  
-  <span
-    class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block;  max-width: 840px; margin-left: auto; margin-right: auto;"
-  >
-    <span
-      class="gatsby-resp-image-background-image"
-      style="padding-bottom: 47.82608695652174%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABjUlEQVQoz62Qy07CQBRAG+OvufEbmETXLv0PWOgH8GhY2wVCAjEuxbZUNEpMTCCB0kDoY0pfdKYz3hkeC40LE25yeqfzOHPnKtaDev74+ngxtIYlwzCQQNd11Ol0ULvdRpqmoftWC/V6PaTdaajb7SLTNOW+gaGjoWWVXoz+pTkwzxQRnwP9Cy8cbttz7vk+9zyP+5BXq5VkuVwexovFgruuywOxD3BcnwdBwHme8PFkbEnhZDT6yPyAu35Ioiimcbwl2ZMkh7xer2kURZQxRouioIQKaM4h4KI+6E6VIAxHfBsUYH8BHwYSyY81cU5U+iyFIcZSWGRZQaB8gvEvKMAJkbdCdRIQwxQRSCG0SZdCGEhhinERzGbMt20WAHg+Z6HjMG86ZWKeJAmD5x0qBBGD1rA0TffCbYXw9ndxU5KmebrZ0Ah6leW5RPzHcCDJMgrrsrciRA93TxXkO+GTFEKTJ/wIgTF+k8JarXbdaDRuIJfr9XoFckXkf1BWVfW2Wq1eSeEuTo6A0mw2lW+bPmTlyk2LHgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
-    >
-      <img
-        class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
-        alt="No profiling data has been recorded for the selected root"
-        title=""
-        src="/static/no-profiler-data-multi-root-0755492a211f5bbb775285c0ff2fdfda-acf85.png"
-        srcset="/static/no-profiler-data-multi-root-0755492a211f5bbb775285c0ff2fdfda-c1418.png 210w,
-/static/no-profiler-data-multi-root-0755492a211f5bbb775285c0ff2fdfda-5d5d8.png 420w,
-/static/no-profiler-data-multi-root-0755492a211f5bbb775285c0ff2fdfda-acf85.png 840w,
-/static/no-profiler-data-multi-root-0755492a211f5bbb775285c0ff2fdfda-53c76.png 1012w"
-        sizes="(max-width: 840px) 100vw, 840px"
-      />
-    </span>
-  </span>
-  
-  </a>
-    </p>
-<p>This message indicates that no performance data was recorded for the root that’s selected in the “Elements” panel.
-In this case, try selecting a different root in that panel to view profiling information for that root:</p>
-<p><img src="/select-a-root-to-view-profiling-data-bdc30593d414b5c8d2ae92027ed11940.gif" alt="Select a root in the &#x22;Elements&#x22; panel to view its performance data"></p>
-<h3 id="no-timing-data-to-display-for-the-selected-commit"><a href="#no-timing-data-to-display-for-the-selected-commit" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>No timing data to display for the selected commit </h3>
-<p>Sometimes a commit may be so fast that <code class="gatsby-code-text">performance.now()</code> doesn’t give DevTools any meaningful timing information.
-In this case, the following message will be shown:</p>
-<p>
-  <a
-    class="gatsby-resp-image-link"
-    href="/static/no-timing-data-for-commit-63b2fb6298feecb179272c467020ed95-53c76.png"
-    style="display: block"
-    target="_blank"
-    rel="noopener"
-  >
-  
-  <span
-    class="gatsby-resp-image-wrapper"
-    style="position: relative; display: block;  max-width: 840px; margin-left: auto; margin-right: auto;"
-  >
-    <span
-      class="gatsby-resp-image-background-image"
-      style="padding-bottom: 47.82608695652174%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABe0lEQVQoz61QTUvDQBAN4l/z4m9oQM8e/R/1oFehLaU/QSwWexK0CYQkrQURNGAxkKRJNh/tJpNdZzdJqSdB+uAxs7Ozb96Oot/dnj7q47OFaXZMy1RNs6Zt26quzdSHyVSdTJ/U8f1Y1TRd1i3LUufzuYzY28F4bhjGiSLwtrTfw4Twjy+PJ4TwLMt2jCLCw+Cbp4HD1+EaaylPkoTHcYx3kcwFBRzHMaSg7/uvDAtxRsuCUiiKAsqyhBLjZrMFmsdAExfCyAcoKaRpCqvVClzXxfuN6C2EoOd5Lyh3rBBClrwGINlfzPOcoRuGLllVVax5JxzPfgniFytsrr+bZ1zkguiIp/it7XZbTwXglFLegjEmBcMw1KRgEARLLHIUrkhCGJ4ZrmFHbGS4J0kc1rpie2gFa4doddFMLpCA0+Vu0J2MYqcoAi1ELkT2WDSCz1IQJ3/yAwB3akvBfr9/ORwOrweDQRd59Q928f1Nr9e7kIINjg5AZTQaKT+0smf7vT5VvwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
-    >
-      <img
-        class="gatsby-resp-image-image"
-        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
-        alt="No timing data to display for the selected commit"
-        title=""
-        src="/static/no-timing-data-for-commit-63b2fb6298feecb179272c467020ed95-acf85.png"
-        srcset="/static/no-timing-data-for-commit-63b2fb6298feecb179272c467020ed95-c1418.png 210w,
-/static/no-timing-data-for-commit-63b2fb6298feecb179272c467020ed95-5d5d8.png 420w,
-/static/no-timing-data-for-commit-63b2fb6298feecb179272c467020ed95-acf85.png 840w,
-/static/no-timing-data-for-commit-63b2fb6298feecb179272c467020ed95-53c76.png 1012w"
-        sizes="(max-width: 840px) 100vw, 840px"
-      />
-    </span>
-  </span>
-  
-  </a>
-    </p>
-<h2 id="deep-dive-video"><a href="#deep-dive-video" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deep dive video </h2>
-<p>The following video demonstrates how the React profiler can be used to detect and improve performance bottlenecks in an actual React application.</p>
-<br>
-<div>
-          <div
-            class="gatsby-resp-iframe-wrapper"
-            style="padding-bottom: 56.25%; position: relative; height: 0; overflow: hidden;"
-          >
-            <iframe src="https://www.youtube-nocookie.com/embed/nySib7ipZdk?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-          "></iframe>
-          </div>
-          </div>]]></description><link>https://zh-hans.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html</link><guid isPermaLink="false">https://zh-hans.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html</guid><pubDate>Mon, 10 Sep 2018 00:00:00 GMT</pubDate></item></channel></rss>
+<p>This release wouldn’t be possible without our wonderful community of contributors. We’d like to thank <a href="https://github.com/andriijas" target="_blank" rel="nofollow noopener noreferrer">Andreas Cederström</a>, <a href="https://github.com/clemmy" target="_blank" rel="nofollow noopener noreferrer">Clement Hoang</a>, <a href="https://github.com/existentialism" target="_blank" rel="nofollow noopener noreferrer">Brian Ng</a>, <a href="https://github.com/kentcdodds" target="_blank" rel="nofollow noopener noreferrer">Kent C. Dodds</a>, <a href="https://github.com/viankakrisna" target="_blank" rel="nofollow noopener noreferrer">Ade Viankakrisna Fadlil</a>, <a href="https://github.com/ai" target="_blank" rel="nofollow noopener noreferrer">Andrey Sitnik</a>, <a href="https://github.com/ro-savage" target="_blank" rel="nofollow noopener noreferrer">Ro Savage</a>, <a href="https://github.com/Fabianopb" target="_blank" rel="nofollow noopener noreferrer">Fabiano Brito</a>, <a href="https://github.com/iansu" target="_blank" rel="nofollow noopener noreferrer">Ian Sutherland</a>, <a href="https://github.com/petetnt" target="_blank" rel="nofollow noopener noreferrer">Pete Nykänen</a>, <a href="https://github.com/jeffposnick" target="_blank" rel="nofollow noopener noreferrer">Jeffrey Posnick</a>, <a href="https://github.com/bugzpodder" target="_blank" rel="nofollow noopener noreferrer">Jack Zhao</a>, <a href="https://github.com/sokra" target="_blank" rel="nofollow noopener noreferrer">Tobias Koppers</a>, <a href="https://github.com/hzoo" target="_blank" rel="nofollow noopener noreferrer">Henry Zhu</a>, <a href="https://github.com/arcanis" target="_blank" rel="nofollow noopener noreferrer">Maël Nison</a>, <a href="https://github.com/lixiaoyan" target="_blank" rel="nofollow noopener noreferrer">XiaoYan Li</a>, <a href="https://github.com/themre" target="_blank" rel="nofollow noopener noreferrer">Marko Trebizan</a>, <a href="https://github.com/mareksuscak" target="_blank" rel="nofollow noopener noreferrer">Marek Suscak</a>, <a href="https://github.com/miraage" target="_blank" rel="nofollow noopener noreferrer">Mikhail Osher</a>, and many others who provided feedback and testing for this release.</p>]]></description><link>https://zh-hans.reactjs.org/blog/2018/10/01/create-react-app-v2.html</link><guid isPermaLink="false">https://zh-hans.reactjs.org/blog/2018/10/01/create-react-app-v2.html</guid><pubDate>Mon, 01 Oct 2018 00:00:00 GMT</pubDate></item></channel></rss>
