@@ -52,42 +52,46 @@
       var s = document.getElementsByTagName("script")[0]; 
       s.parentNode.insertBefore(hm, s);
     })();
-  </script><link rel="alternate" type="application/rss+xml" href="/feed.xml"/><title data-react-helmet="true">Introducing the React Profiler – React Blog</title><link data-react-helmet="true" rel="canonical" href="https://zh-hans.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" href="https://reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html" hreflang="x-default"/><link data-react-helmet="true" rel="alternate" hreflang="en" href="https://reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="ar" href="https://ar.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="az" href="https://az.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="es" href="https://es.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="fr" href="https://fr.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="it" href="https://it.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="ja" href="https://ja.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="ko" href="https://ko.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="mn" href="https://mn.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="pl" href="https://pl.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="pt-br" href="https://pt-br.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="ru" href="https://ru.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="tr" href="https://tr.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="uk" href="https://uk.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="zh-hans" href="https://zh-hans.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="zh-hant" href="https://zh-hant.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><meta data-react-helmet="true" property="og:title" content="Introducing the React Profiler – React Blog"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:url" content="https://zh-hans.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><meta data-react-helmet="true" property="og:image" content="/logo-og.png"/><meta data-react-helmet="true" property="og:description" content="React 16.5 adds support for a new DevTools profiler plugin.
-This plugin uses React’s  experimental Profiler API  to collect timing information about each component that’s rendered in order to identify performance bottlenecks in React applications.
-It will be fully compatible with our upcoming  time slicing and suspense  features. This blog post covers the following topics: Profiling an application Reading performance data Browsing commits Filtering commits Flame chart Ranked chart Component…"/><meta data-react-helmet="true" property="fb:app_id" content="623268441017527"/><link rel="shortcut icon" href="/icons/icon-48x48.png"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#20232a"/><link as="script" rel="preload" href="/2-436d71ad8bac6a1f73f8.js"/><link as="script" rel="preload" href="/component---src-templates-blog-js-5938a749142c3a4d1504.js"/><link as="script" rel="preload" href="/0-ac844d7a1e69bdea6f12.js"/><link as="script" rel="preload" href="/1-ce9bd6dee2fa6dd48dd7.js"/><link as="script" rel="preload" href="/app-759aec59f009e8ffbabe.js"/><link as="script" rel="preload" href="/webpack-runtime-d48a1e6db54000f1c232.js"/><link rel="preload" href="/static/d/113/path---blog-2018-09-10-introducing-the-react-profiler-html-065-562-Ay7ZwupFsD1tnZhFDnGVxPrjwM.json" as="fetch" crossorigin="use-credentials"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div class="css-190hivd"><header class="css-19rsoyj"><div class="css-tctv7l"><div class="css-iiezwn"><a class="css-4ivotw" href="/"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K" alt="" height="20"/><span class="css-184keb2">React</span></a><nav class="css-79txt3"><a class="css-hobwqm" href="/docs/getting-started.html">文档</a><a class="css-hobwqm" href="/tutorial/tutorial.html">教程</a><a class="css-li68ai" href="/blog/">博客<span class="css-2y24fj"></span></a><a class="css-hobwqm" href="/community/support.html">社区</a></nav><form class="css-33zy79"><input type="search" id="algolia-doc-search" placeholder="搜索" aria-label="在文档中搜索..." class="css-7dpbpx"/></form><div class="css-nypjs8"><a class="css-zvm479" href="/versions">v<!-- -->16.12.0</a><a class="css-1upvlu3" href="/languages"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d=" M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z " class="css-c4d79v"></path></svg> <span class="css-1rsw1pf">多语言</span></a><a href="https://github.com/facebook/react/" target="_blank" rel="noopener" class="css-6oo1gu">GitHub<svg x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="css-19vhmgv"><path fill="currentColor" d="
+  </script><link rel="alternate" type="application/rss+xml" href="/feed.xml"/><title data-react-helmet="true">React Profiler 介绍 – React Blog</title><link data-react-helmet="true" rel="canonical" href="https://zh-hans.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" href="https://reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html" hreflang="x-default"/><link data-react-helmet="true" rel="alternate" hreflang="en" href="https://reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="ar" href="https://ar.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="az" href="https://az.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="es" href="https://es.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="fr" href="https://fr.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="it" href="https://it.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="ja" href="https://ja.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="ko" href="https://ko.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="mn" href="https://mn.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="pl" href="https://pl.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="pt-br" href="https://pt-br.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="ru" href="https://ru.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="tr" href="https://tr.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="uk" href="https://uk.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="zh-hans" href="https://zh-hans.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><link data-react-helmet="true" rel="alternate" hreflang="zh-hant" href="https://zh-hant.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><meta data-react-helmet="true" property="og:title" content="React Profiler 介绍 – React Blog"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:url" content="https://zh-hans.reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html"/><meta data-react-helmet="true" property="og:image" content="/logo-og.png"/><meta data-react-helmet="true" property="og:description" content="React 16.5 添加了对开发者工具的 Profiler 插件的支持。
+该插件使用了 React 的  Profiler 实验性 API  来收集所有组件渲染的耗时，目的是为了找出 React 应用程序的性能瓶颈。
+它将完全兼容我们即将推出的 时间片和 suspense  特性。 这篇博文包含以下内容： 分析应用程序 查看性能数据 浏览提交记录 筛选提交记录 火焰图 排序图 组件图 交互动作 常见问题 选择的根元素下没有分析数据被记录 选中的提交记录没可展示的时间数据 视频解析 分析应用程序  开发者工具将会对支持新的分析 API 的应用程序添加一个“Profiler”选项卡： 注意：  16.5+ 在 DEV 模式下支持性能分析。
+在生产环境也可以使用   代码包进行性能分析，
+查阅  fb.me/react-profiling  了解更多如何使用这个代码包。 这个“Profiler”面板初始为空，你可以点击 record 按钮开始分析： 当你开始记录之后，开发者工具将在每次应用程序渲染时自动收集性能数据。
+你可以和平常一样使用你的应用程序，
+当你完成分析之后，请点击“Stop…"/><meta data-react-helmet="true" property="fb:app_id" content="623268441017527"/><link rel="shortcut icon" href="/icons/icon-48x48.png"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="theme-color" content="#20232a"/><link as="script" rel="preload" href="/2-436d71ad8bac6a1f73f8.js"/><link as="script" rel="preload" href="/component---src-templates-blog-js-5938a749142c3a4d1504.js"/><link as="script" rel="preload" href="/0-ac844d7a1e69bdea6f12.js"/><link as="script" rel="preload" href="/1-ce9bd6dee2fa6dd48dd7.js"/><link as="script" rel="preload" href="/app-888610e5dbeb88da2f55.js"/><link as="script" rel="preload" href="/webpack-runtime-1b59e8dfde2e97ece913.js"/><link rel="preload" href="/static/d/822/path---blog-2018-09-10-introducing-the-react-profiler-html-065-562-DMOWuddYzhSDxCtrKXG59pIaY.json" as="fetch" crossorigin="use-credentials"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" role="group"><div class="css-190hivd"><header class="css-19rsoyj"><div class="css-tctv7l"><div class="css-iiezwn"><a class="css-4ivotw" href="/"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K" alt="" height="20"/><span class="css-184keb2">React</span></a><nav class="css-79txt3"><a class="css-hobwqm" href="/docs/getting-started.html">文档</a><a class="css-hobwqm" href="/tutorial/tutorial.html">教程</a><a class="css-li68ai" href="/blog/">博客<span class="css-2y24fj"></span></a><a class="css-hobwqm" href="/community/support.html">社区</a></nav><form class="css-33zy79"><input type="search" id="algolia-doc-search" placeholder="搜索" aria-label="在文档中搜索..." class="css-7dpbpx"/></form><div class="css-nypjs8"><a class="css-zvm479" href="/versions">v<!-- -->16.12.0</a><a class="css-1upvlu3" href="/languages"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"></path><path d=" M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z " class="css-c4d79v"></path></svg> <span class="css-1rsw1pf">多语言</span></a><a href="https://github.com/facebook/react/" target="_blank" rel="noopener" class="css-6oo1gu">GitHub<svg x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="css-19vhmgv"><path fill="currentColor" d="
       M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,
       0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z
     "></path><polygon fill="currentColor" points="
       45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,
       14.9 62.8,22.9 71.5,22.9
-      "></polygon></svg></a></div></div></div></header><div class="css-1tv5sxm css-15lkjjo"><div class="css-5v0gxc css-95xunl"><div class="css-12vsfho"><div class="css-tctv7l"><div class="css-10335ra"><article class="css-174qq1k"><header class="css-hgc6lu"><h1 class="css-1rwyxsf">Introducing the React Profiler</h1></header><div class="css-acl5jg">September 10, 2018<!-- --> <span>by<!-- --> <a href="https://github.com/bvaughn" class="css-1hs4uiz">Brian Vaughn</a></span></div><div class="css-124oy3v"><div class="css-15weewl"><p>React 16.5 adds support for a new DevTools profiler plugin.
-This plugin uses React’s <a href="https://github.com/reactjs/rfcs/pull/51" target="_blank" rel="nofollow noopener noreferrer">experimental Profiler API</a> to collect timing information about each component that’s rendered in order to identify performance bottlenecks in React applications.
-It will be fully compatible with our upcoming <a href="/blog/2018/03/01/sneak-peek-beyond-react-16.html">time slicing and suspense</a> features.</p>
-<p>This blog post covers the following topics:</p>
+      "></polygon></svg></a></div></div></div></header><div class="css-1tv5sxm css-15lkjjo"><div class="css-5v0gxc css-95xunl"><div class="css-12vsfho"><div class="css-tctv7l"><div class="css-10335ra"><article class="css-174qq1k"><header class="css-hgc6lu"><h1 class="css-1rwyxsf">React Profiler 介绍</h1></header><div class="css-acl5jg">September 10, 2018<!-- --> <span>by<!-- --> <a href="https://github.com/bvaughn" class="css-1hs4uiz">Brian Vaughn</a></span></div><div class="css-124oy3v"><div class="css-15weewl"><p>React 16.5 添加了对开发者工具的 Profiler 插件的支持。
+该插件使用了 React 的<a href="https://github.com/reactjs/rfcs/pull/51" target="_blank" rel="nofollow noopener noreferrer"> Profiler 实验性 API</a> 来收集所有组件渲染的耗时，目的是为了找出 React 应用程序的性能瓶颈。
+它将完全兼容我们即将推出的<a href="/blog/2018/03/01/sneak-peek-beyond-react-16.html">时间片和 suspense</a> 特性。</p>
+<p>这篇博文包含以下内容：</p>
 <ul>
-<li><a href="#profiling-an-application">Profiling an application</a></li>
+<li><a href="#profiling-an-application">分析应用程序</a></li>
 <li>
-<p><a href="#reading-performance-data">Reading performance data</a></p>
+<p><a href="#reading-performance-data">查看性能数据</a></p>
 <ul>
-<li><a href="#browsing-commits">Browsing commits</a></li>
-<li><a href="#filtering-commits">Filtering commits</a></li>
-<li><a href="#flame-chart">Flame chart</a></li>
-<li><a href="#ranked-chart">Ranked chart</a></li>
-<li><a href="#component-chart">Component chart</a></li>
-<li><a href="#interactions">Interactions</a></li>
+<li><a href="#browsing-commits">浏览提交记录</a></li>
+<li><a href="#filtering-commits">筛选提交记录</a></li>
+<li><a href="#flame-chart">火焰图</a></li>
+<li><a href="#ranked-chart">排序图</a></li>
+<li><a href="#component-chart">组件图</a></li>
+<li><a href="#interactions">交互动作</a></li>
 </ul>
 </li>
 <li>
-<p><a href="#troubleshooting">Troubleshooting</a></p>
+<p><a href="#troubleshooting">常见问题</a></p>
 <ul>
-<li><a href="#no-profiling-data-has-been-recorded-for-the-selected-root">No profiling data has been recorded for the selected root</a></li>
-<li><a href="#no-timing-data-to-display-for-the-selected-commit">No timing data to display for the selected commit</a></li>
+<li><a href="#no-profiling-data-has-been-recorded-for-the-selected-root">选择的根元素下没有分析数据被记录</a></li>
+<li><a href="#no-timing-data-to-display-for-the-selected-commit">选中的提交记录没可展示的时间数据</a></li>
 </ul>
 </li>
-<li><a href="#deep-dive-video">Deep dive video</a></li>
+<li><a href="#deep-dive-video">视频解析</a></li>
 </ul>
-<h2 id="profiling-an-application"><a href="#profiling-an-application" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Profiling an application </h2>
-<p>DevTools will show a “Profiler” tab for applications that support the new profiling API:</p>
+<h2 id="profiling-an-application"><a href="#profiling-an-application" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>分析应用程序 </h2>
+<p>开发者工具将会对支持新的分析 API 的应用程序添加一个“Profiler”选项卡：</p>
 <p>
   <a
     class="gatsby-resp-image-link"
@@ -108,7 +112,7 @@ It will be fully compatible with our upcoming <a href="/blog/2018/03/01/sneak-pe
       <img
         class="gatsby-resp-image-image"
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
-        alt="New DevTools "profiler" tab"
+        alt="新的开发者工具“Profiler”选项卡"
         title=""
         src="/static/devtools-profiler-tab-4da6b55fc3c98de04c261cd902c14dc3-acf85.png"
         srcset="/static/devtools-profiler-tab-4da6b55fc3c98de04c261cd902c14dc3-c1418.png 210w,
@@ -123,12 +127,12 @@ It will be fully compatible with our upcoming <a href="/blog/2018/03/01/sneak-pe
   </a>
     </p>
 <blockquote>
-<p>Note:</p>
-<p><code class="gatsby-code-text">react-dom</code> 16.5+ supports profiling in DEV mode.
-A production profiling bundle is also available as <code class="gatsby-code-text">react-dom/profiling</code>.
-Read more about how to use this bundle at <a href="https://fb.me/react-profiling" target="_blank" rel="nofollow noopener noreferrer">fb.me/react-profiling</a> </p>
+<p>注意：</p>
+<p><code class="gatsby-code-text">react-dom</code> 16.5+ 在 DEV 模式下支持性能分析。
+在生产环境也可以使用 <code class="gatsby-code-text">react-dom/profiling</code> 代码包进行性能分析，
+查阅 <a href="https://fb.me/react-profiling" target="_blank" rel="nofollow noopener noreferrer">fb.me/react-profiling</a> 了解更多如何使用这个代码包。</p>
 </blockquote>
-<p>The “Profiler” panel will be empty initially. Click the record button to start profiling:</p>
+<p>这个“Profiler”面板初始为空，你可以点击 record 按钮开始分析：</p>
 <p>
   <a
     class="gatsby-resp-image-link"
@@ -149,7 +153,7 @@ Read more about how to use this bundle at <a href="https://fb.me/react-profiling
       <img
         class="gatsby-resp-image-image"
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
-        alt="Click "record" to start profiling"
+        alt="点击“record”开始分析"
         title=""
         src="/static/start-profiling-bae8d10e17f06eeb8c512c91c0153cff-acf85.png"
         srcset="/static/start-profiling-bae8d10e17f06eeb8c512c91c0153cff-c1418.png 210w,
@@ -163,9 +167,9 @@ Read more about how to use this bundle at <a href="https://fb.me/react-profiling
   
   </a>
     </p>
-<p>Once you’ve started recording, DevTools will automatically collect performance information each time your application renders.
-Use your app as you normally would.
-When you are finished profiling, click the “Stop” button.</p>
+<p>当你开始记录之后，开发者工具将在每次应用程序渲染时自动收集性能数据。
+你可以和平常一样使用你的应用程序，
+当你完成分析之后，请点击“Stop”按钮。</p>
 <p>
   <a
     class="gatsby-resp-image-link"
@@ -186,7 +190,7 @@ When you are finished profiling, click the “Stop” button.</p>
       <img
         class="gatsby-resp-image-image"
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
-        alt="Click "stop" when you are finished profiling"
+        alt="当你完成性能分析之后，点击“stop”"
         title=""
         src="/static/stop-profiling-45619de03bed468869f7a0878f220586-acf85.png"
         srcset="/static/stop-profiling-45619de03bed468869f7a0878f220586-c1418.png 210w,
@@ -200,17 +204,17 @@ When you are finished profiling, click the “Stop” button.</p>
   
   </a>
     </p>
-<p>Assuming your application rendered at least once while profiling, DevTools will show several ways to view the performance data.
-We’ll <a href="#reading-performance-data">take a look at each of these below</a>.</p>
-<h2 id="reading-performance-data"><a href="#reading-performance-data" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reading performance data </h2>
-<h3 id="browsing-commits"><a href="#browsing-commits" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Browsing commits </h3>
-<p>Conceptually, React does work in two phases:</p>
+<p>假设你的应用程序在分析时至少渲染一次，开发者工具将提供几种方法查看性能数据。
+我们将会<a href="#reading-performance-data">在接下来介绍它们</a>。</p>
+<h2 id="reading-performance-data"><a href="#reading-performance-data" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>查看性能数据 </h2>
+<h3 id="browsing-commits"><a href="#browsing-commits" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>浏览提交记录 </h3>
+<p>从概念上讲，React 分两个阶段工作：</p>
 <ul>
-<li>The <strong>render</strong> phase determines what changes need to be made to e.g. the DOM. During this phase, React calls <code class="gatsby-code-text">render</code> and then compares the result to the previous render.</li>
-<li>The <strong>commit</strong> phase is when React applies any changes. (In the case of React DOM, this is when React inserts, updates, and removes DOM nodes.) React also calls lifecycles like <code class="gatsby-code-text">componentDidMount</code> and <code class="gatsby-code-text">componentDidUpdate</code> during this phase.</li>
+<li><strong>渲染</strong> 阶段会确定需要进行哪些更改，比如 DOM。在此阶段，React 调用 <code class="gatsby-code-text">render</code>，然后将结果与上次渲染的结果进行比较。</li>
+<li><strong>提交</strong> 阶段发生在当 React 应用变化时。（对于 React DOM 来说，会发生在 React 插入，更新及删除 DOM 节点的时候。）在此阶段，React 还会调用 <code class="gatsby-code-text">componentDidMount</code> 和 <code class="gatsby-code-text">componentDidUpdate</code> 之类的生命周期方法。</li>
 </ul>
-<p>The DevTools profiler groups performance info by commit.
-Commits are displayed in a bar chart near the top of the profiler:</p>
+<p>开发者工具的 profiler 是在提交阶段收集性能数据的。
+每次提交都会被展示在 profiler 界面顶部的条形图中：</p>
 <p>
   <a
     class="gatsby-resp-image-link"
@@ -231,7 +235,7 @@ Commits are displayed in a bar chart near the top of the profiler:</p>
       <img
         class="gatsby-resp-image-image"
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
-        alt="Bar chart of profiled commits"
+        alt="已分析的提交记录"
         title=""
         src="/static/commit-selector-bd72dec045515d59be51c944e902d263-8ef72.png"
         srcset="/static/commit-selector-bd72dec045515d59be51c944e902d263-69e48.png 210w,
@@ -244,21 +248,21 @@ Commits are displayed in a bar chart near the top of the profiler:</p>
   
   </a>
     </p>
-<p>Each bar in the chart represents a single commit with the currently selected commit colored black.
-You can click on a bar (or the left/right arrow buttons) to select a different commit.</p>
-<p>The color and height of each bar corresponds to how long that commit took to render.
-(Taller, yellow bars took longer than shorter, blue bars.)</p>
-<h3 id="filtering-commits"><a href="#filtering-commits" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Filtering commits </h3>
-<p>The longer you profile, the more times your application will render.
-In some cases you may end up with <em>too many commits</em> to easily process.
-The profiler offers a filtering mechanism to help with this.
-Use it to specify a threshold and the profiler will hide all commits that were <em>faster</em> than that value.</p>
-<p><img src="/filtering-commits-683b9d860ef722e1505e5e629df7ef7e.gif" alt="Filtering commits by time"></p>
-<h3 id="flame-chart"><a href="#flame-chart" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Flame chart </h3>
-<p>The flame chart view represents the state of your application for a particular commit.
-Each bar in the chart represents a React component (e.g. <code class="gatsby-code-text">App</code>, <code class="gatsby-code-text">Nav</code>).
-The size and color of the bar represents how long it took to render the component and its children.
-(The width of a bar represents how much time was spent <em>when the component last rendered</em> and the color represents how much time was spent <em>as part of the current commit</em>.)</p>
+<p>在条形图中，每一列都表示单次提交的数据，当前选中的提交会变成黑色。
+你可以点击各个列（或者是左/右切换按钮）来查看不同的提交的数据。</p>
+<p>这些列的颜色和高度对应该次提交渲染所需的时间。
+(较高的黄色的列比较短的蓝色的列耗费的时间长。)</p>
+<h3 id="filtering-commits"><a href="#filtering-commits" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>筛选提交记录 </h3>
+<p>你分析的时间越长，应用程序渲染的次数就越多。
+有时候，你可能会因为<em>过多的提交记录</em>而感觉难以处理。
+profiler 提供了一个筛选功能，帮助你解决这个问题。
+使用它来设置一个时间阈值，profiler 将隐藏所有比该值<em>更快</em>的提交记录。</p>
+<p><img src="/filtering-commits-683b9d860ef722e1505e5e629df7ef7e.gif" alt="按时间筛选提交记录"></p>
+<h3 id="flame-chart"><a href="#flame-chart" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>火焰图 </h3>
+<p>火焰图会展示你所指定的那一次提交的应用程序的信息，
+图中的每一列都代表了一个 React 组件，（如：<code class="gatsby-code-text">App</code>，<code class="gatsby-code-text">Nav</code>）。
+列的大小和颜色代表渲染该组件及其子组件所需的耗时。
+(列的宽度代表组件<em>上次渲染</em>的耗时，列的颜色代表在<em>该次提交</em>中渲染的耗时。)</p>
 <p>
   <a
     class="gatsby-resp-image-link"
@@ -279,7 +283,7 @@ The size and color of the bar represents how long it took to render the componen
       <img
         class="gatsby-resp-image-image"
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
-        alt="Example flame chart"
+        alt="火焰图示例"
         title=""
         src="/static/flame-chart-3046f500b9bfc052bde8b7b3b3cfc243-acf85.png"
         srcset="/static/flame-chart-3046f500b9bfc052bde8b7b3b3cfc243-c1418.png 210w,
@@ -294,30 +298,30 @@ The size and color of the bar represents how long it took to render the componen
   </a>
     </p>
 <blockquote>
-<p>Note:</p>
-<p>The width of a bar indicates how long it took to render the component (and its children) when they last rendered.
-If the component did not re-render as part of this commit, the time represents a previous render.
-The wider a component is, the longer it took to render.</p>
-<p>The color of a bar indicates how long the component (and its children) took to render in the selected commit.
-Yellow components took more time, blue components took less time, and gray components did not render at all during this commit.</p>
+<p>注意：</p>
+<p>列的宽度表示组件（及其子组件）上次渲染所需的耗时。
+如果组件在本次提交中未重新渲染，则代表上次渲染的耗时。
+一个列越宽，其所代表的组件渲染耗时就越长。</p>
+<p>列的颜色表示组件（及其子组件）在本次提交中渲染的耗时。
+黄色代表耗时较长，蓝色代表耗时较短，灰色代表该组件在这次提交中没有重新渲染。</p>
 </blockquote>
-<p>For example, the commit shown above took a total of 18.4ms to render.
-The <code class="gatsby-code-text">Router</code> component was the “most expensive” to render (taking 18.4ms).
-Most of this time was due to two of its children, <code class="gatsby-code-text">Nav</code> (8.4ms) and <code class="gatsby-code-text">Route</code> (7.9ms).
-The rest of the time was divided between its remaining children or spent in the component’s own render method.</p>
-<p>You can zoom in or out on a flame chart by clicking on components:
-<img src="/zoom-in-and-out-39ba82394205242af7c37ccb3a631f4d.gif" alt="Click on a component to zoom in or out"></p>
-<p>Clicking on a component will also select it and show information in the right side panel which includes its <code class="gatsby-code-text">props</code> and <code class="gatsby-code-text">state</code> at the time of this commit.
-You can drill into these to learn more about what the component actually rendered during the commit:</p>
-<p><img src="/props-and-state-1f4d023f1a0f281386625f28df87c78f.gif" alt="Viewing a component&#x27;s props and state for a commit"></p>
-<p>In some cases, selecting a component and stepping between commits may also provide a hint as to <em>why</em> the component rendered:</p>
-<p><img src="/see-which-props-changed-cc2a8b37bbce52c49a11c2f8e55dccbc.gif" alt="Seeing which values changed between commits"></p>
-<p>The above image shows that <code class="gatsby-code-text">state.scrollOffset</code> changed between commits.
-This is likely what caused the <code class="gatsby-code-text">List</code> component to re-render.</p>
-<h3 id="ranked-chart"><a href="#ranked-chart" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ranked chart </h3>
-<p>The ranked chart view represents a single commit.
-Each bar in the chart represents a React component (e.g. <code class="gatsby-code-text">App</code>, <code class="gatsby-code-text">Nav</code>).
-The chart is ordered so that the components which took the longest to render are at the top.</p>
+<p>例如，上图中所展示的提交总共渲染耗时为 18.4ms。
+<code class="gatsby-code-text">Router</code> 组件是渲染成本“最昂贵的”（花费了 18.4ms）。
+它所花费的时间大部分在它的两个子组件上：<code class="gatsby-code-text">Nav</code>（8.4ms）和 <code class="gatsby-code-text">Route</code>（7.9ms）。
+剩下的时间用于它的其他子组件和它自身的渲染。</p>
+<p>你可以通过单击组件放大或缩小火焰图：
+<img src="/zoom-in-and-out-39ba82394205242af7c37ccb3a631f4d.gif" alt="单击组件放大或缩小火焰图"></p>
+<p>点击一个组件的同时也会选中它，它的详细信息将会展示在右边的面板中，该面板会展示该组件在这次提交时的 <code class="gatsby-code-text">props</code> 和 <code class="gatsby-code-text">state</code>。
+你可以深入研究这些信息，进一步了解这次提交组件实际渲染的内容：</p>
+<p><img src="/props-and-state-1f4d023f1a0f281386625f28df87c78f.gif" alt="查看组件提交的 props 和 state"></p>
+<p>在某些情况下，选中一个组件后在不同的提交之间切换也可以发现触发这次渲染的<em>原因</em>：</p>
+<p><img src="/see-which-props-changed-cc2a8b37bbce52c49a11c2f8e55dccbc.gif" alt="查看提交之间变化的数据"></p>
+<p>上图表示 <code class="gatsby-code-text">state.scrollOffset</code> 在提交之间被改变了。
+这可能是导致 <code class="gatsby-code-text">List</code> 组件重新渲染的原因。</p>
+<h3 id="ranked-chart"><a href="#ranked-chart" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>排序图 </h3>
+<p>同火焰图一样，排序图也会展示你所指定的那一次提交的信息，
+图中的每一列都代表了一个 React 组件（如：<code class="gatsby-code-text">App</code>，<code class="gatsby-code-text">Nav</code>）。
+不同的是排序图是有顺序的，耗时最长的组件会展示在第一行。</p>
 <p>
   <a
     class="gatsby-resp-image-link"
@@ -338,7 +342,7 @@ The chart is ordered so that the components which took the longest to render are
       <img
         class="gatsby-resp-image-image"
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
-        alt="Example ranked chart"
+        alt="排序图示例"
         title=""
         src="/static/ranked-chart-0c81347535e28c9cdef0e94fab887b89-acf85.png"
         srcset="/static/ranked-chart-0c81347535e28c9cdef0e94fab887b89-c1418.png 210w,
@@ -353,16 +357,16 @@ The chart is ordered so that the components which took the longest to render are
   </a>
     </p>
 <blockquote>
-<p>Note:</p>
-<p>A component’s render time includes the time spent rendering its children,
-so the components which took the longest to render are generally near the top of the tree.</p>
+<p>注意：</p>
+<p>组件的渲染耗时包含了其子组件渲染所花费的时间，
+因此，渲染耗时最长的组件通常距离树的顶部最近。</p>
 </blockquote>
-<p>As with the flame chart, you can zoom in or out on a ranked chart by clicking on components.</p>
-<h3 id="component-chart"><a href="#component-chart" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Component chart </h3>
-<p>Sometimes it’s useful to see how many times a particular component rendered while you were profiling.
-The component chart provides this information in the form of a bar chart.
-Each bar in the chart represents a time when the component rendered.
-The color and height of each bar corresponds to how long the component took to render <em>relative to other components</em> in a particular commit.</p>
+<p>与火焰图一样，你可以通过单击组件放大或缩小排序图。</p>
+<h3 id="component-chart"><a href="#component-chart" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>组件图 </h3>
+<p>在你分析的过程中，使用该图来查看某一组件在多次提交中的渲染时间有时候是非常有用的。
+组件图会以一个列的形式展示，
+其中每一列都表示你所选择的组件某一次提交下的渲染时间。
+每列的颜色和高度都表示该组件在某次提交中<em>同其它组件</em>的渲染耗时对比。</p>
 <p>
   <a
     class="gatsby-resp-image-link"
@@ -383,7 +387,7 @@ The color and height of each bar corresponds to how long the component took to r
       <img
         class="gatsby-resp-image-image"
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
-        alt="Example component chart"
+        alt="组件图示例"
         title=""
         src="/static/component-chart-d71275b42c6109e222fbb0932a0c8c09-acf85.png"
         srcset="/static/component-chart-d71275b42c6109e222fbb0932a0c8c09-c1418.png 210w,
@@ -397,13 +401,13 @@ The color and height of each bar corresponds to how long the component took to r
   
   </a>
     </p>
-<p>The chart above shows that the <code class="gatsby-code-text">List</code> component rendered 11 times.
-It also shows that each time it rendered, it was the most “expensive” component in the commit (meaning that it took the longest).</p>
-<p>To view this chart, either double-click on a component <em>or</em> select a component and click on the blue bar chart icon in the right detail pane.
-You can return to the previous chart by clicking the “x” button in the right detail pane.
-You can also double click on a particular bar to view more information about that commit.</p>
-<p><img src="/see-all-commits-for-a-fiber-99cb4321ded8eb0c21ae5fc673878563.gif" alt="How to view all renders for a specific component"></p>
-<p>If the selected component did not render at all during the profiling session, the following message will be shown:</p>
+<p>上图显示 <code class="gatsby-code-text">List</code> 组件渲染了 11 次。
+同时它还显示了每次渲染时，它都是提交中最“昂贵”的组件（意味着它的耗时最长）。</p>
+<p>想查看此图，请双击组件<em>或者</em>选择组件后单击右侧面板中的蓝色列表图标。
+你可以通过单击右侧面板中的“x”按钮返回原图。
+也可以通过双击组件图的某一列来查看该提交的更多信息</p>
+<p><img src="/see-all-commits-for-a-fiber-99cb4321ded8eb0c21ae5fc673878563.gif" alt="如何查看某一组件所有的渲染"></p>
+<p>如果你选中的组件在分析期间从未被渲染过，则会显示下面的消息：</p>
 <p>
   <a
     class="gatsby-resp-image-link"
@@ -424,7 +428,7 @@ You can also double click on a particular bar to view more information about tha
       <img
         class="gatsby-resp-image-image"
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
-        alt="No render times for the selected component"
+        alt="所选组件无渲染时间"
         title=""
         src="/static/no-render-times-for-selected-component-8eb0c37a13353ef5d9e61ae8fc040705-acf85.png"
         srcset="/static/no-render-times-for-selected-component-8eb0c37a13353ef5d9e61ae8fc040705-c1418.png 210w,
@@ -438,9 +442,9 @@ You can also double click on a particular bar to view more information about tha
   
   </a>
     </p>
-<h3 id="interactions"><a href="#interactions" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Interactions </h3>
-<p>React recently added another <a href="https://fb.me/react-interaction-tracing" target="_blank" rel="nofollow noopener noreferrer">experimental API</a> for tracing the <em>cause</em> of an update.
-“Interactions” traced with this API will also be shown in the profiler:</p>
+<h3 id="interactions"><a href="#interactions" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>交互动作 </h3>
+<p>React 最近添加了一个用于跟踪更新<em>原因</em>的<a href="https://fb.me/react-interaction-tracing" target="_blank" rel="nofollow noopener noreferrer">实验性 API</a>。
+被这些 API 跟踪的“交互动作”也会显示在 profiler 中:</p>
 <p>
   <a
     class="gatsby-resp-image-link"
@@ -461,7 +465,7 @@ You can also double click on a particular bar to view more information about tha
       <img
         class="gatsby-resp-image-image"
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
-        alt="The interactions panel"
+        alt="交互动作面板"
         title=""
         src="/static/interactions-a91a39ac076b71aa7a202aaf46f8bd5a-acf85.png"
         srcset="/static/interactions-a91a39ac076b71aa7a202aaf46f8bd5a-c1418.png 210w,
@@ -475,10 +479,10 @@ You can also double click on a particular bar to view more information about tha
   
   </a>
     </p>
-<p>The image above shows a profiling session that traced four interactions.
-Each row represents an interaction that was traced.
-The colored dots along the row represent commits that were related to that interaction.</p>
-<p>You can also see which interactions were traced for a particular commit from the flame chart and ranked chart views as well:</p>
+<p>上图显示了一个分析期间被跟踪的四个交互动作。
+每行都表示一个已经被跟踪的交互动作。
+每行中彩色的点表示与该交互动作相关的提交记录。</p>
+<p>你还可以从火焰图和排序图的视图中查看某一提交记录被跟踪了哪些交互动作：</p>
 <p>
   <a
     class="gatsby-resp-image-link"
@@ -499,7 +503,7 @@ The colored dots along the row represent commits that were related to that inter
       <img
         class="gatsby-resp-image-image"
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
-        alt="List of interactions for a commit"
+        alt="提交记录的交互动作列表"
         title=""
         src="/static/interactions-for-commit-9847e78f930cb7cf2b0f9682853a5dbc-acf85.png"
         srcset="/static/interactions-for-commit-9847e78f930cb7cf2b0f9682853a5dbc-c1418.png 210w,
@@ -513,12 +517,12 @@ The colored dots along the row represent commits that were related to that inter
   
   </a>
     </p>
-<p>You can navigate between interactions and commits by clicking on them:</p>
-<p><img src="/navigate-between-interactions-and-commits-7c66e7686b5242473c87b3d0b4576cf3.gif" alt="Navigate between interactions and commits"></p>
-<p>The tracing API is still new and we will cover it in more detail in a future blog post.</p>
-<h2 id="troubleshooting"><a href="#troubleshooting" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Troubleshooting </h2>
-<h3 id="no-profiling-data-has-been-recorded-for-the-selected-root"><a href="#no-profiling-data-has-been-recorded-for-the-selected-root" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>No profiling data has been recorded for the selected root </h3>
-<p>If your application has multiple “roots”, you may see the following message after profiling:
+<p>通过单击交互动作和提交记录，可以在它们之间切换：</p>
+<p><img src="/navigate-between-interactions-and-commits-7c66e7686b5242473c87b3d0b4576cf3.gif" alt="在交互动作和提交记录之间切换"></p>
+<p>tracing API 是新的特性，我们会在未来的博文中更详细地介绍它。</p>
+<h2 id="troubleshooting"><a href="#troubleshooting" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>常见问题 </h2>
+<h3 id="no-profiling-data-has-been-recorded-for-the-selected-root"><a href="#no-profiling-data-has-been-recorded-for-the-selected-root" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>选择的根元素下没有分析数据被记录 </h3>
+<p>如果你的应用程序有多个“根”节点，你可能会在分析后看到以下消息：
 
   <a
     class="gatsby-resp-image-link"
@@ -539,7 +543,7 @@ The colored dots along the row represent commits that were related to that inter
       <img
         class="gatsby-resp-image-image"
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
-        alt="No profiling data has been recorded for the selected root"
+        alt="选择的根元素下没有分析数据被记录"
         title=""
         src="/static/no-profiler-data-multi-root-0755492a211f5bbb775285c0ff2fdfda-acf85.png"
         srcset="/static/no-profiler-data-multi-root-0755492a211f5bbb775285c0ff2fdfda-c1418.png 210w,
@@ -553,12 +557,12 @@ The colored dots along the row represent commits that were related to that inter
   
   </a>
     </p>
-<p>This message indicates that no performance data was recorded for the root that’s selected in the “Elements” panel.
-In this case, try selecting a different root in that panel to view profiling information for that root:</p>
-<p><img src="/select-a-root-to-view-profiling-data-bdc30593d414b5c8d2ae92027ed11940.gif" alt="Select a root in the &#x22;Elements&#x22; panel to view its performance data"></p>
-<h3 id="no-timing-data-to-display-for-the-selected-commit"><a href="#no-timing-data-to-display-for-the-selected-commit" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>No timing data to display for the selected commit </h3>
-<p>Sometimes a commit may be so fast that <code class="gatsby-code-text">performance.now()</code> doesn’t give DevTools any meaningful timing information.
-In this case, the following message will be shown:</p>
+<p>这个信息表示你在“Elements”面板中选择的根节点没有性能数据被记录。
+在这种情况下，请尝试在该面板中选择其他根节点来查看性能分析数据：</p>
+<p><img src="/select-a-root-to-view-profiling-data-bdc30593d414b5c8d2ae92027ed11940.gif" alt="在“Elements”界面中选择根节点来查看它的性能数据"></p>
+<h3 id="no-timing-data-to-display-for-the-selected-commit"><a href="#no-timing-data-to-display-for-the-selected-commit" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>选中的提交记录没可展示的时间数据 </h3>
+<p>有时提交的速度可能很快，以至于 <code class="gatsby-code-text">performance.now()</code> 无法给开发者工具任何有意义的数据。
+在这种情况下，将显示以下的消息：</p>
 <p>
   <a
     class="gatsby-resp-image-link"
@@ -579,7 +583,7 @@ In this case, the following message will be shown:</p>
       <img
         class="gatsby-resp-image-image"
         style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
-        alt="No timing data to display for the selected commit"
+        alt="选中的提交记录没可展示的时间数据"
         title=""
         src="/static/no-timing-data-for-commit-63b2fb6298feecb179272c467020ed95-acf85.png"
         srcset="/static/no-timing-data-for-commit-63b2fb6298feecb179272c467020ed95-c1418.png 210w,
@@ -593,8 +597,8 @@ In this case, the following message will be shown:</p>
   
   </a>
     </p>
-<h2 id="deep-dive-video"><a href="#deep-dive-video" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deep dive video </h2>
-<p>The following video demonstrates how the React profiler can be used to detect and improve performance bottlenecks in an actual React application.</p>
+<h2 id="deep-dive-video"><a href="#deep-dive-video" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>视频解析 </h2>
+<p>以下视频演示了如何使用 React profiler 来检测和改进实际 React 应用程序中的性能瓶颈。</p>
 <br>
 <div>
           <div
@@ -609,7 +613,7 @@ In this case, the following message will be shown:</p>
             height: 100%;
           "></iframe>
           </div>
-          </div></div><div class="css-1m173d1"><a href="https://github.com/reactjs/zh-hans.reactjs.org/tree/master/content/blog/2018-09-10-introducing-the-react-profiler.md" class="css-1x091gh">编辑此页面</a></div></div></article><div class="css-1kbu8hg"><div><div style="opacity:0;transition:opacity 0.5s ease" class="css-3ao3zf"><div style="transform:translate(0px, 40px);transition:transform 0.5s ease" class="css-p72dfi"><nav class="css-7stz2q css-1aai96l"><div><button aria-expanded="true" aria-controls="section_014039398648949986" class="css-1j8jxus"><div class="css-13zw18r">Recent Posts<svg viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" class="css-1mwek35"><g transform="translate(904.92214,-879.1482)"><path d="
+          </div></div><div class="css-1m173d1"><a href="https://github.com/reactjs/zh-hans.reactjs.org/tree/master/content/blog/2018-09-10-introducing-the-react-profiler.md" class="css-1x091gh">编辑此页面</a></div></div></article><div class="css-1kbu8hg"><div><div style="opacity:0;transition:opacity 0.5s ease" class="css-3ao3zf"><div style="transform:translate(0px, 40px);transition:transform 0.5s ease" class="css-p72dfi"><nav class="css-7stz2q css-1aai96l"><div><button aria-expanded="true" aria-controls="section_013748954056806917" class="css-1j8jxus"><div class="css-13zw18r">Recent Posts<svg viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" class="css-1mwek35"><g transform="translate(904.92214,-879.1482)"><path d="
           m -673.67664,1221.6502 -231.2455,-231.24803 55.6165,
           -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894,
           0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892,
@@ -618,7 +622,7 @@ In this case, the following message will be shown:</p>
           55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864
           -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688,
           -104.0616 -231.873,-231.248 z
-        " fill="currentColor"></path></g></svg></div></button><ul id="section_014039398648949986" class="css-ts0qly"><li class="css-atv6j6"><a class="css-19pur11" href="/blog/2019/11/06/building-great-user-experiences-with-concurrent-mode-and-suspense.html">Building Great User Experiences with Concurrent Mode and Suspense</a></li><li class="css-atv6j6"><a class="css-19pur11" href="/blog/2019/10/22/react-release-channels.html">使用 React 预发布版为新功能打基础</a></li><li class="css-atv6j6"><a class="css-19pur11" href="/blog/2019/08/15/new-react-devtools.html">全新的 React DevTools 简介</a></li><li class="css-atv6j6"><a class="css-19pur11" href="/blog/2019/08/08/react-v16.9.0.html">React v16.9.0 发布及 Roadmap 最新进展</a></li><li class="css-atv6j6"><a class="css-19pur11" href="/blog/2019/02/23/is-react-translated-yet.html">Is React Translated Yet? ¡Sí! Sim! はい！</a></li><li class="css-atv6j6"><a class="css-19pur11" href="/blog/2019/02/06/react-v16.8.0.html">React v16.8：Hook 发布</a></li><li class="css-atv6j6"><a class="css-19pur11" href="/blog/2018/12/19/react-v-16-7.html">React v16.7：不包含 Hook 的版本</a></li><li class="css-atv6j6"><a class="css-19pur11" href="/blog/2018/11/27/react-16-roadmap.html">React 16.x Roadmap</a></li><li class="css-atv6j6"><a class="css-19pur11" href="/blog/2018/11/13/react-conf-recap.html">React Conf 会议纪要：Hook，Suspense 和 Concurrent Rendering</a></li><li class="css-atv6j6"><a class="css-19pur11" href="/blog/2018/10/23/react-v-16-6.html">React v16.6.0: lazy, memo and contextType</a></li><li class="css-atv6j6"><a class="css-19pur11" href="/blog/all.html">All posts ...</a></li></ul></div></nav></div></div><div role="button" tabindex="0" class="css-yx40kw"><div class="css-tctv7l"><div class="css-7ef8f8"><div class="css-1dgtft4"><svg viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="15" height="15" class="css-sg9l1i"><g transform="translate(904.92214,-879.1482)"><path d="
+        " fill="currentColor"></path></g></svg></div></button><ul id="section_013748954056806917" class="css-ts0qly"><li class="css-atv6j6"><a class="css-19pur11" href="/blog/2019/11/06/building-great-user-experiences-with-concurrent-mode-and-suspense.html">Building Great User Experiences with Concurrent Mode and Suspense</a></li><li class="css-atv6j6"><a class="css-19pur11" href="/blog/2019/10/22/react-release-channels.html">使用 React 预发布版为新功能打基础</a></li><li class="css-atv6j6"><a class="css-19pur11" href="/blog/2019/08/15/new-react-devtools.html">全新的 React DevTools 简介</a></li><li class="css-atv6j6"><a class="css-19pur11" href="/blog/2019/08/08/react-v16.9.0.html">React v16.9.0 发布及 Roadmap 最新进展</a></li><li class="css-atv6j6"><a class="css-19pur11" href="/blog/2019/02/23/is-react-translated-yet.html">Is React Translated Yet? ¡Sí! Sim! はい！</a></li><li class="css-atv6j6"><a class="css-19pur11" href="/blog/2019/02/06/react-v16.8.0.html">React v16.8：Hook 发布</a></li><li class="css-atv6j6"><a class="css-19pur11" href="/blog/2018/12/19/react-v-16-7.html">React v16.7：不包含 Hook 的版本</a></li><li class="css-atv6j6"><a class="css-19pur11" href="/blog/2018/11/27/react-16-roadmap.html">React 16.x Roadmap</a></li><li class="css-atv6j6"><a class="css-19pur11" href="/blog/2018/11/13/react-conf-recap.html">React Conf 会议纪要：Hook，Suspense 和 Concurrent Rendering</a></li><li class="css-atv6j6"><a class="css-19pur11" href="/blog/2018/10/23/react-v-16-6.html">React v16.6.0: lazy, memo and contextType</a></li><li class="css-atv6j6"><a class="css-19pur11" href="/blog/all.html">All posts ...</a></li></ul></div></nav></div></div><div role="button" tabindex="0" class="css-yx40kw"><div class="css-tctv7l"><div class="css-7ef8f8"><div class="css-1dgtft4"><svg viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="15" height="15" class="css-sg9l1i"><g transform="translate(904.92214,-879.1482)"><path d="
           m -673.67664,1221.6502 -231.2455,-231.24803 55.6165,
           -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894,
           0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892,
@@ -703,4 +707,4 @@ In this case, the following message will be shown:</p>
     ga('create', 'UA-41298772-1', 'auto', {});
       
       }
-      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-blog-js","jsonName":"blog-2018-09-10-introducing-the-react-profiler-html-065","path":"/blog/2018/09/10/introducing-the-react-profiler.html"};window.dataPath="113/path---blog-2018-09-10-introducing-the-react-profiler-html-065-562-Ay7ZwupFsD1tnZhFDnGVxPrjwM";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app.7680dd1dbef935673cce.css","/app-759aec59f009e8ffbabe.js"],"component---src-templates-codepen-example-js":["/component---src-templates-codepen-example-js-fe85f4b7b08b14dd232a.js"],"component---src-templates-community-js":["/component---src-templates-community-js-5160b4c9454365a209a3.js"],"component---src-templates-docs-js":["/component---src-templates-docs-js-0c58b7e308129a855856.js"],"component---src-templates-tutorial-js":["/component---src-templates-tutorial-js-640e028125ed415c7f05.js"],"component---src-templates-blog-js":["/component---src-templates-blog-js-5938a749142c3a4d1504.js"],"component---src-pages-404-js":["/component---src-pages-404-js-1f0b9fc23828f8b36144.js"],"component---src-pages-acknowledgements-html-js":["/component---src-pages-acknowledgements-html-js-283113e5f75451eeea02.js"],"component---src-pages-blog-all-html-js":["/component---src-pages-blog-all-html-js-d9543385ce197ba26c6e.js"],"component---src-pages-docs-error-decoder-html-js":["/component---src-pages-docs-error-decoder-html-js-00fb1eda4e5552a903df.js"],"component---src-pages-index-js":["/component---src-pages-index-js-01f007926b2fdec899e6.js"],"component---src-pages-jsx-compiler-html-js":["/component---src-pages-jsx-compiler-html-js-bac727102717834a47b8.js"],"component---src-pages-languages-js":["/component---src-pages-languages-js-88bfcb372241c48120ed.js"],"component---src-pages-versions-js":["/component---src-pages-versions-js-9bdfb5a8bcf53874aeb9.js"]};/*]]>*/</script><script src="/webpack-runtime-d48a1e6db54000f1c232.js" async=""></script><script src="/app-759aec59f009e8ffbabe.js" async=""></script><script src="/1-ce9bd6dee2fa6dd48dd7.js" async=""></script><script src="/0-ac844d7a1e69bdea6f12.js" async=""></script><script src="/component---src-templates-blog-js-5938a749142c3a4d1504.js" async=""></script><script src="/2-436d71ad8bac6a1f73f8.js" async=""></script><script src="https://unpkg.com/docsearch.js@2.4.1/dist/cdn/docsearch.min.js"></script></body></html>
+      </script><script id="gatsby-script-loader">/*<![CDATA[*/window.page={"componentChunkName":"component---src-templates-blog-js","jsonName":"blog-2018-09-10-introducing-the-react-profiler-html-065","path":"/blog/2018/09/10/introducing-the-react-profiler.html"};window.dataPath="822/path---blog-2018-09-10-introducing-the-react-profiler-html-065-562-DMOWuddYzhSDxCtrKXG59pIaY";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"app":["/app.7680dd1dbef935673cce.css","/app-888610e5dbeb88da2f55.js"],"component---src-templates-codepen-example-js":["/component---src-templates-codepen-example-js-fe85f4b7b08b14dd232a.js"],"component---src-templates-community-js":["/component---src-templates-community-js-5160b4c9454365a209a3.js"],"component---src-templates-docs-js":["/component---src-templates-docs-js-0c58b7e308129a855856.js"],"component---src-templates-tutorial-js":["/component---src-templates-tutorial-js-640e028125ed415c7f05.js"],"component---src-templates-blog-js":["/component---src-templates-blog-js-5938a749142c3a4d1504.js"],"component---src-pages-404-js":["/component---src-pages-404-js-1f0b9fc23828f8b36144.js"],"component---src-pages-acknowledgements-html-js":["/component---src-pages-acknowledgements-html-js-283113e5f75451eeea02.js"],"component---src-pages-blog-all-html-js":["/component---src-pages-blog-all-html-js-d9543385ce197ba26c6e.js"],"component---src-pages-docs-error-decoder-html-js":["/component---src-pages-docs-error-decoder-html-js-00fb1eda4e5552a903df.js"],"component---src-pages-index-js":["/component---src-pages-index-js-01f007926b2fdec899e6.js"],"component---src-pages-jsx-compiler-html-js":["/component---src-pages-jsx-compiler-html-js-bac727102717834a47b8.js"],"component---src-pages-languages-js":["/component---src-pages-languages-js-88bfcb372241c48120ed.js"],"component---src-pages-versions-js":["/component---src-pages-versions-js-9bdfb5a8bcf53874aeb9.js"]};/*]]>*/</script><script src="/webpack-runtime-1b59e8dfde2e97ece913.js" async=""></script><script src="/app-888610e5dbeb88da2f55.js" async=""></script><script src="/1-ce9bd6dee2fa6dd48dd7.js" async=""></script><script src="/0-ac844d7a1e69bdea6f12.js" async=""></script><script src="/component---src-templates-blog-js-5938a749142c3a4d1504.js" async=""></script><script src="/2-436d71ad8bac6a1f73f8.js" async=""></script><script src="https://unpkg.com/docsearch.js@2.4.1/dist/cdn/docsearch.min.js"></script></body></html>
