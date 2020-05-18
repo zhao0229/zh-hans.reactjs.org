@@ -124,10 +124,17 @@ class Clock extends React.Component {
 }
 ```
 
-2) 添加一个 [class 构造函数](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes#Constructor)，然后在该函数中为 `this.state` 赋初值：
+2) 添加一个 [class 构造函数](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes#Constructor)，在类中添加两个interface：myProps、myState，然后在该函数中为 `this.state` 赋初值：
 
 ```js{4}
-class Clock extends React.Component {
+interface myProps {
+
+}
+interface myState {
+    date: any
+}
+class Clock extends React.Component <myProps,myState> {
+  private timerID: any;
   constructor(props) {
     super(props);
     this.state = {date: new Date()};
